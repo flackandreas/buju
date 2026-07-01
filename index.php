@@ -72,7 +72,11 @@ try {
                 <div class="topbar-left">
                     <h2 class="view-title" id="page-title">Dashboard</h2>
                 </div>
-                <div class="topbar-right">
+                <div class="topbar-right" style="display: flex; gap: 12px; align-items: center;">
+                    <div id="sync-status-badge" class="sync-status-badge status-online">
+                        <span class="sync-status-dot"></span>
+                        <span id="sync-status-text" class="sync-status-text">Online</span>
+                    </div>
                     <span class="competition-year">Saison 2026</span>
                 </div>
             </header>

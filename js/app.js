@@ -10,6 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let selectedStudent = null;
     let autoSaveTimeout = null;
     let charts = {};
+    // Offline / Sync Queue state
+    let syncQueue = JSON.parse(localStorage.getItem('bjs_sync_queue') || '{}');
+    let syncStatusBadge = document.getElementById('sync-status-badge');
+    let syncStatusText = document.getElementById('sync-status-text');
+    let isSyncing = false;
 
     // DOM Elements
     const navItems = document.querySelectorAll('.nav-item');
@@ -418,6 +423,87 @@ document.addEventListener('DOMContentLoaded', () => {
         autoSaveTimeout = setTimeout(performSave, 800); // 800ms debounce
     }
 
+    function updateSyncStatusUI() {
+        if (!syncStatusBadge || !syncStatusText) return;
+        const queueSize = Object.keys(syncQueue).length;
+        if (!navigator.onLine) {
+            syncStatusBadge.className = 'sync-status-badge status-offline';
+            if (queueSize > 0) {
+                syncStatusText.textContent = `Offline (${queueSize} unsync.)`;
+            } else {
+                syncStatusText.textContent = 'Offline';
+            }
+        } else if (queueSize > 0) {
+            syncStatusBadge.className = 'sync-status-badge status-syncing';
+            syncStatusText.textContent = `Syncing (${queueSize})...`;
+        } else {
+            syncStatusBadge.className = 'sync-status-badge status-online';
+            syncStatusText.textContent = 'Online';
+        }
+    }
+
+    window.addEventListener('online', () => {
+        updateSyncStatusUI();
+        syncData();
+    });
+    window.addEventListener('offline', () => {
+        updateSyncStatusUI();
+    });
+
+    function syncData() {
+        if (isSyncing || !navigator.onLine) return;
+        
+        const pendingIds = Object.keys(syncQueue);
+        if (pendingIds.length === 0) {
+            updateSyncStatusUI();
+            return;
+        }
+        
+        isSyncing = true;
+        updateSyncStatusUI();
+        
+        const nextId = pendingIds[0];
+        const payload = syncQueue[nextId];
+        
+        fetch('api.php?action=save_result', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        })
+        .then(res => res.json())
+        .then(res => {
+            if (res.success) {
+                delete syncQueue[nextId];
+                localStorage.setItem('bjs_sync_queue', JSON.stringify(syncQueue));
+                
+                if (selectedStudent && selectedStudent.id == nextId) {
+                    saveStatus.className = 'auto-save-indicator visible';
+                    saveStatus.querySelector('.save-status-text').textContent = 'Gespeichert';
+                }
+            } else {
+                console.warn('Sync server error for student', nextId, res.error);
+            }
+        })
+        .catch(err => {
+            console.error('Sync network error:', err);
+        })
+        .finally(() => {
+            isSyncing = false;
+            updateSyncStatusUI();
+            
+            if (Object.keys(syncQueue).length > 0 && navigator.onLine) {
+                setTimeout(syncData, 300);
+            }
+        });
+    }
+
+    // Run sync check on startup and periodically
+    updateSyncStatusUI();
+    syncData();
+    setInterval(syncData, 5000);
+
     function performSave() {
         if (!selectedStudent) return;
         
@@ -430,43 +516,37 @@ document.addEventListener('DOMContentLoaded', () => {
             wurf: inputWurf.value
         };
         
-        fetch('api.php?action=save_result', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(payload)
-        })
-        .then(res => res.json())
-        .then(res => {
-            if (res.success) {
-                saveStatus.className = 'auto-save-indicator visible';
-                saveStatus.querySelector('.save-status-text').textContent = 'Gespeichert';
-                
-                // Update student in local memory
-                const index = studentsList.findIndex(s => s.id === studentId);
-                if (index !== -1) {
-                    studentsList[index].ausdauer_leistung = payload.ausdauer;
-                    studentsList[index].sprint_leistung = payload.sprint;
-                    studentsList[index].sprung_leistung = payload.sprung;
-                    studentsList[index].wurf_leistung = payload.wurf;
-                    studentsList[index].gesamt_punkte = res.calculations.gesamt_punkte;
-                    studentsList[index].urkunde = res.calculations.urkunde;
-                    studentsList[index].note = res.calculations.note;
-                    
-                    // Re-render that student item badge in list without complete list rebuild
-                    updateStudentRowBadge(studentId, res.calculations);
-                }
-            } else {
-                throw new Exception(res.error || 'Server error');
-            }
-        })
-        .catch(err => {
-            console.error('Save failed:', err);
-            saveStatus.className = 'auto-save-indicator visible error';
-            saveStatus.querySelector('.save-status-text').textContent = 'Fehler!';
-            showToast('Fehler beim automatischen Speichern.', 'error');
-        });
+        // Overwrite and recalculate locally immediately for instant list display
+        const calc = calculateLocalResults(selectedStudent, payload.ausdauer, payload.sprint, payload.sprung, payload.wurf);
+        
+        const index = studentsList.findIndex(s => s.id === studentId);
+        if (index !== -1) {
+            studentsList[index].ausdauer_leistung = payload.ausdauer;
+            studentsList[index].sprint_leistung = payload.sprint;
+            studentsList[index].sprung_leistung = payload.sprung;
+            studentsList[index].wurf_leistung = payload.wurf;
+            studentsList[index].gesamt_punkte = calc.gesamt;
+            studentsList[index].urkunde = calc.urkunde;
+            studentsList[index].note = calc.note;
+            
+            updateStudentRowBadge(studentId, calc);
+        }
+        
+        // Cache input locally
+        localStorage.setItem(`bjs_student_input_${studentId}`, JSON.stringify(payload));
+        
+        // Add to sync queue
+        syncQueue[studentId] = payload;
+        localStorage.setItem('bjs_sync_queue', JSON.stringify(syncQueue));
+        
+        // Visual offline/local indicator
+        saveStatus.className = 'auto-save-indicator visible';
+        saveStatus.querySelector('.save-status-text').textContent = 'Lokal gesichert';
+        
+        updateSyncStatusUI();
+        
+        // Attempt sync
+        syncData();
     }
 
     function updateStudentRowBadge(studentId, calc) {
@@ -477,10 +557,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!badgeContainer) return;
         
         let totalParticipations = 0;
-        if (inputAusdauer.value !== '') totalParticipations++;
-        if (inputSprint.value !== '') totalParticipations++;
-        if (inputSprung.value !== '') totalParticipations++;
-        if (inputWurf.value !== '') totalParticipations++;
+        const inputState = syncQueue[studentId] || {
+            ausdauer: inputAusdauer.value,
+            sprint: inputSprint.value,
+            sprung: inputSprung.value,
+            wurf: inputWurf.value
+        };
+        
+        if (inputState.ausdauer !== '') totalParticipations++;
+        if (inputState.sprint !== '') totalParticipations++;
+        if (inputState.sprung !== '') totalParticipations++;
+        if (inputState.wurf !== '') totalParticipations++;
         
         badgeContainer.innerHTML = '';
         if (totalParticipations === 0) {
@@ -490,8 +577,29 @@ document.addEventListener('DOMContentLoaded', () => {
             if (calc.urkunde === 'Ehrenurkunde') badgeClass = 'badge-gold';
             if (calc.urkunde === 'Siegerurkunde') badgeClass = 'badge-green';
             
-            badgeContainer.innerHTML = `<span class="badge ${badgeClass}">${calc.gesamt_punkte} P.</span>`;
+            badgeContainer.innerHTML = `<span class="badge ${badgeClass}">${calc.gesamt || calc.gesamt_punkte} P.</span>`;
         }
+    }
+
+    function mergeLocalCache(students) {
+        return students.map(s => {
+            const cachedInput = localStorage.getItem(`bjs_student_input_${s.id}`);
+            if (cachedInput) {
+                const inputs = JSON.parse(cachedInput);
+                const calc = calculateLocalResults(s, inputs.ausdauer, inputs.sprint, inputs.sprung, inputs.wurf);
+                return {
+                    ...s,
+                    ausdauer_leistung: inputs.ausdauer,
+                    sprint_leistung: inputs.sprint,
+                    sprung_leistung: inputs.sprung,
+                    wurf_leistung: inputs.wurf,
+                    gesamt_punkte: calc.gesamt,
+                    urkunde: calc.urkunde,
+                    note: calc.note
+                };
+            }
+            return s;
+        });
     }
 
     // ==========================================
@@ -501,24 +609,34 @@ document.addEventListener('DOMContentLoaded', () => {
     function loadClasses() {
         if (classesLoaded) return;
         
+        const renderClassesOptions = (classes) => {
+            classSelect.innerHTML = '<option value="">-- Klasse wählen --</option>';
+            classes.forEach(cls => {
+                const opt = document.createElement('option');
+                opt.value = cls;
+                opt.textContent = `Klasse ${cls}`;
+                classSelect.appendChild(opt);
+            });
+        };
+        
         fetch('api.php?action=get_classes')
         .then(res => res.json())
         .then(res => {
             if (res.success) {
-                // Populate dropdown
-                classSelect.innerHTML = '<option value="">-- Klasse wählen --</option>';
-                res.classes.forEach(cls => {
-                    const opt = document.createElement('option');
-                    opt.value = cls;
-                    opt.textContent = `Klasse ${cls}`;
-                    classSelect.appendChild(opt);
-                });
+                renderClassesOptions(res.classes);
+                localStorage.setItem('bjs_classes_cache', JSON.stringify(res.classes));
                 classesLoaded = true;
             }
         })
         .catch(err => {
-            console.error('Failed to load classes:', err);
-            showToast('Klassen konnten nicht geladen werden.', 'error');
+            console.warn('Network failed to load classes, loading cache:', err);
+            const cached = localStorage.getItem('bjs_classes_cache');
+            if (cached) {
+                renderClassesOptions(JSON.parse(cached));
+                classesLoaded = true;
+            } else {
+                showToast('Klassen konnten nicht geladen werden (Offline & kein Cache).', 'error');
+            }
         });
     }
 
@@ -538,17 +656,27 @@ document.addEventListener('DOMContentLoaded', () => {
     function loadStudents() {
         studentListUl.innerHTML = '<li class="no-data">Lade Schülerliste...</li>';
         
+        const processStudentsData = (students) => {
+            studentsList = mergeLocalCache(students);
+            renderStudentList(studentsList);
+        };
+        
         fetch(`api.php?action=get_students&klasse=${currentClass}`)
         .then(res => res.json())
         .then(res => {
             if (res.success) {
-                studentsList = res.students;
-                renderStudentList(studentsList);
+                processStudentsData(res.students);
+                localStorage.setItem(`bjs_students_cache_${currentClass}`, JSON.stringify(res.students));
             }
         })
         .catch(err => {
-            console.error('Failed to load students:', err);
-            studentListUl.innerHTML = '<li class="no-data">Ladefehler.</li>';
+            console.warn('Network failed to load students, loading cache:', err);
+            const cached = localStorage.getItem(`bjs_students_cache_${currentClass}`);
+            if (cached) {
+                processStudentsData(JSON.parse(cached));
+            } else {
+                studentListUl.innerHTML = '<li class="no-data">Verbindungsfehler (Offline & kein Cache).</li>';
+            }
         });
     }
 

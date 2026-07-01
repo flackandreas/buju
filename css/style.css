@@ -229,6 +229,65 @@ body {
     border-radius: 20px;
 }
 
+.sync-status-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.sync-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.sync-status-badge.status-online {
+    border-color: rgba(16, 185, 129, 0.25);
+    background-color: rgba(16, 185, 129, 0.08);
+    color: #10B981;
+}
+
+.sync-status-badge.status-online .sync-status-dot {
+    background-color: #10B981;
+    box-shadow: 0 0 8px #10B981;
+}
+
+.sync-status-badge.status-offline {
+    border-color: rgba(245, 158, 11, 0.25);
+    background-color: rgba(245, 158, 11, 0.08);
+    color: #F59E0B;
+}
+
+.sync-status-badge.status-offline .sync-status-dot {
+    background-color: #F59E0B;
+    box-shadow: 0 0 8px #F59E0B;
+}
+
+.sync-status-badge.status-syncing {
+    border-color: rgba(59, 130, 246, 0.25);
+    background-color: rgba(59, 130, 246, 0.08);
+    color: #3B82F6;
+}
+
+.sync-status-badge.status-syncing .sync-status-dot {
+    background-color: #3B82F6;
+    box-shadow: 0 0 8px #3B82F6;
+    animation: pulse-dot 1s infinite alternate;
+}
+
+@keyframes pulse-dot {
+    from { opacity: 0.3; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1.1); }
+}
+
 /* View Sections Routing */
 .content-view {
     display: none;
