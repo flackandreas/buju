@@ -83,6 +83,10 @@ try {
             
             <!-- View: Dashboard -->
             <section id="view-dashboard" class="content-view active-view">
+                <div class="print-actions-row no-print" style="margin-bottom: 20px; display: flex; gap: 12px;">
+                    <button type="button" class="btn btn-secondary" id="btn-print-dashboard">🖨️ Dashboard drucken</button>
+                    <button type="button" class="btn btn-secondary" id="btn-print-top3">🏆 Bestenliste drucken (Top 3)</button>
+                </div>
                 <!-- KPI cards -->
                 <div class="kpi-grid">
                     <div class="kpi-card gradient-card-blue">
@@ -187,8 +191,9 @@ try {
                                     <!-- Options will be loaded via JS -->
                                 </select>
                             </div>
-                            <div class="search-input-container">
-                                <input type="text" id="student-search" placeholder="Name suchen..." class="form-input" disabled>
+                            <div class="search-input-container" style="display: flex; gap: 8px;">
+                                <input type="text" id="student-search" placeholder="Name suchen..." class="form-input" style="flex: 1;" disabled>
+                                <button type="button" class="btn btn-secondary" id="btn-print-class" title="Klassenliste drucken" style="padding: 10px 14px;" disabled>🖨️</button>
                             </div>
                         </div>
                         
@@ -360,6 +365,9 @@ try {
     <!-- Toast notifications -->
     <div id="toast-container" class="toast-container"></div>
     
+    <!-- Dynamic Print Section (only visible during print) -->
+    <div id="print-area" class="print-only"></div>
+
     <!-- Load rules & app logic -->
     <script src="js/rules.js"></script>
     <script src="js/app.js"></script>

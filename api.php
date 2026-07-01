@@ -209,6 +209,17 @@ try {
             ]);
             break;
             
+        case 'get_top3':
+            send_json([
+                'success' => true,
+                'sprint' => get_top3_by_event($pdo, 'sprint_leistung', 'ASC'),
+                'sprung' => get_top3_by_event($pdo, 'sprung_leistung', 'DESC'),
+                'wurf' => get_top3_by_event($pdo, 'wurf_leistung', 'DESC'),
+                'ausdauer' => get_top3_by_event($pdo, 'ausdauer_leistung', 'ASC'),
+                'punkte' => get_top3_by_event($pdo, 'gesamt_punkte', 'DESC')
+            ]);
+            break;
+            
         case 'reset_db':
             if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
                 send_error("Method not allowed", 405);
@@ -284,4 +295,48 @@ function get_top_performance($pdo, $gender, $column, $order = 'DESC', $is_time =
         'klasse' => $res['klasse'],
         'leistung' => $val
     ];
+}
+
+function get_top3_by_event($pdo, $column, $order = 'DESC') {
+    $where_clause = "r.{$column} IS NOT NULL AND r.{$column} != ''";
+    if ($column === 'gesamt_punkte') {
+        $where_clause .= " AND r.{$column} > 0";
+    }
+    
+    $points_col = ($column === 'gesamt_punkte') ? "r.gesamt_punkte" : "r." . str_replace('_leistung', '_punkte', $column);
+    
+    $res = [];
+    foreach (['M', 'W'] as $gender) {
+        $stmt = $pdo->prepare("
+            SELECT s.vorname, s.name, s.klasse, r.{$column} as leistung, {$points_col} as punkte
+            FROM students s
+            JOIN results r ON s.id = r.student_id
+            WHERE s.geschlecht = ? AND {$where_clause}
+            ORDER BY r.{$column} {$order}
+            LIMIT 3
+        ");
+        $stmt->execute([$gender]);
+        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        $formatted = [];
+        foreach ($rows as $row) {
+            $val = $row['leistung'];
+            if ($column === 'gesamt_punkte') {
+                $val = intval($val) . " P.";
+            } elseif ($column === 'sprung_leistung' || $column === 'wurf_leistung') {
+                $val = floatval($val) . " m";
+            } elseif ($column === 'sprint_leistung') {
+                $val = floatval($val) . " sek";
+            }
+            
+            $formatted[] = [
+                'name' => $row['vorname'] . ' ' . $row['name'],
+                'klasse' => $row['klasse'],
+                'leistung' => $val,
+                'punkte' => intval($row['punkte'])
+            ];
+        }
+        $res[$gender] = $formatted;
+    }
+    return $res;
 }

@@ -1198,3 +1198,177 @@ body {
         width: 100%;
     }
 }
+
+/* ==========================================
+   PRINT LAYOUT STYLES
+   ========================================== */
+.print-only {
+    display: none;
+}
+
+@media print {
+    /* Hide screen elements */
+    .sidebar, .topbar, .no-print, .toast-container, .print-actions-row, .sidebar-footer {
+        display: none !important;
+    }
+    
+    body {
+        background: #FFF !important;
+        color: #000 !important;
+        font-size: 11pt;
+    }
+    
+    .main-content {
+        margin-left: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Active area printing */
+    body.print-active-area > *:not(#print-area) {
+        display: none !important;
+    }
+    
+    body.print-active-area #print-area {
+        display: block !important;
+    }
+    
+    /* Clean tables for print */
+    .print-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .print-table th, .print-table td {
+        border: 1px solid #000;
+        padding: 6px 10px;
+        font-size: 10pt;
+        text-align: left;
+        color: #000 !important;
+    }
+    
+    .print-table th {
+        background-color: #F3F4F6 !important;
+        font-weight: bold;
+    }
+    
+    .print-header {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    
+    .print-header h2 {
+        font-family: var(--font-header);
+        font-size: 22pt;
+        margin-bottom: 5px;
+    }
+    
+    .print-header p {
+        font-size: 12pt;
+        color: #555;
+    }
+    
+    /* Highscore Grid for print */
+    .print-highscore-section {
+        margin-bottom: 25px;
+        page-break-inside: avoid;
+    }
+    
+    .print-highscore-title {
+        font-family: var(--font-header);
+        font-size: 14pt;
+        border-bottom: 2px solid #000;
+        padding-bottom: 4px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .print-highscore-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    
+    /* Dashboard Print Styles */
+    body.print-dashboard-layout .sidebar,
+    body.print-dashboard-layout .topbar,
+    body.print-dashboard-layout .print-actions-row {
+        display: none !important;
+    }
+    
+    body.print-dashboard-layout #view-dashboard {
+        display: block !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    
+    body.print-dashboard-layout .kpi-card {
+        background: #FFF !important;
+        color: #000 !important;
+        border: 1px solid #000 !important;
+        box-shadow: none !important;
+        margin-bottom: 10px;
+        float: left;
+        width: 23%;
+        margin-right: 2%;
+    }
+    
+    body.print-dashboard-layout .kpi-card:last-child {
+        margin-right: 0;
+    }
+    
+    body.print-dashboard-layout .kpi-value,
+    body.print-dashboard-layout .kpi-label,
+    body.print-dashboard-layout .kpi-subtext {
+        color: #000 !important;
+    }
+    
+    body.print-dashboard-layout .charts-grid {
+        clear: both;
+        display: block;
+    }
+    
+    body.print-dashboard-layout .chart-card {
+        width: 48%;
+        float: left;
+        margin-right: 4%;
+        margin-bottom: 20px;
+    }
+    
+    body.print-dashboard-layout .chart-card:last-child {
+        margin-right: 0;
+    }
+    
+    body.print-dashboard-layout .details-card {
+        clear: both;
+        background: #FFF !important;
+        border: 1px solid #000 !important;
+        box-shadow: none !important;
+        color: #000 !important;
+        page-break-inside: avoid;
+        margin-bottom: 20px;
+    }
+    
+    body.print-dashboard-layout .chart-card h4,
+    body.print-dashboard-layout .details-card h4 {
+        color: #000 !important;
+        border-bottom: 1px solid #000;
+        padding-bottom: 5px;
+    }
+    
+    body.print-dashboard-layout .data-table th {
+        background-color: #F3F4F6 !important;
+        color: #000 !important;
+        border: 1px solid #000 !important;
+    }
+    
+    body.print-dashboard-layout .data-table td {
+        color: #000 !important;
+        border: 1px solid #000 !important;
+    }
+}

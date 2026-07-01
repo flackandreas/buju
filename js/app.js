@@ -649,6 +649,7 @@ document.addEventListener('DOMContentLoaded', () => {
             studentSearch.disabled = true;
             studentSearch.value = '';
             studentListUl.innerHTML = '<li class="no-data">Bitte wählen Sie zuerst eine Klasse aus.</li>';
+            if (btnPrintClass) btnPrintClass.disabled = true;
             closeInputForm();
         }
     });
@@ -659,6 +660,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const processStudentsData = (students) => {
             studentsList = mergeLocalCache(students);
             renderStudentList(studentsList);
+            if (btnPrintClass) btnPrintClass.disabled = false;
         };
         
         fetch(`api.php?action=get_students&klasse=${currentClass}`)
@@ -676,6 +678,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 processStudentsData(JSON.parse(cached));
             } else {
                 studentListUl.innerHTML = '<li class="no-data">Verbindungsfehler (Offline & kein Cache).</li>';
+                if (btnPrintClass) btnPrintClass.disabled = true;
             }
         });
     }
@@ -1046,4 +1049,212 @@ document.addEventListener('DOMContentLoaded', () => {
             btnResetDb.textContent = 'Datenbank zurücksetzen';
         });
     });
+
+    // ==========================================
+    // 8. PRINT / EXPORT FUNCTIONALITY
+    // ==========================================
+    const btnPrintClass = document.getElementById('btn-print-class');
+    const btnPrintDashboard = document.getElementById('btn-print-dashboard');
+    const btnPrintTop3 = document.getElementById('btn-print-top3');
+    const printArea = document.getElementById('print-area');
+
+    if (btnPrintClass) {
+        btnPrintClass.addEventListener('click', () => {
+            if (!currentClass || studentsList.length === 0) return;
+            
+            let html = `
+                <div class="print-header">
+                    <h2>Bundesjugendspiele 2026</h2>
+                    <p>Auswertungsliste Klasse: <strong>${currentClass}</strong></p>
+                </div>
+                <table class="print-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Geb.</th>
+                            <th>M/W</th>
+                            <th>Sprint</th>
+                            <th>Weitsprung</th>
+                            <th>Weitwurf</th>
+                            <th>Ausdauer</th>
+                            <th>Punkte</th>
+                            <th>Urkunde</th>
+                            <th>Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+            
+            studentsList.forEach(st => {
+                const sprintVal = st.sprint_leistung !== null ? `${st.sprint_leistung}s` : '-';
+                const sprungVal = st.sprung_leistung !== null ? `${st.sprung_leistung}m` : '-';
+                const wurfVal = st.wurf_leistung !== null ? `${st.wurf_leistung}m` : '-';
+                const ausdauerVal = st.ausdauer_leistung !== null && st.ausdauer_leistung !== '' ? st.ausdauer_leistung : '-';
+                
+                // Determine actual current values from local state or sync queue
+                const cachedInput = localStorage.getItem(`bjs_student_input_${st.id}`);
+                let sprint = sprintVal;
+                let sprung = sprungVal;
+                let wurf = wurfVal;
+                let ausdauer = ausdauerVal;
+                let gesamt = st.gesamt_punkte !== null && st.gesamt_punkte > 0 ? `${st.gesamt_punkte} P.` : '-';
+                let urkunde = st.urkunde && st.gesamt_punkte > 0 ? st.urkunde : '-';
+                let note = st.note && st.gesamt_punkte > 0 ? st.note : '-';
+
+                if (cachedInput) {
+                    const inputs = JSON.parse(cachedInput);
+                    sprint = inputs.sprint !== '' ? `${inputs.sprint}s` : '-';
+                    sprung = inputs.sprung !== '' ? `${inputs.sprung}m` : '-';
+                    wurf = inputs.wurf !== '' ? `${inputs.wurf}m` : '-';
+                    ausdauer = inputs.ausdauer !== '' ? inputs.ausdauer : '-';
+                }
+                
+                html += `
+                    <tr>
+                        <td><strong>${st.name}, ${st.vorname}</strong></td>
+                        <td>${st.geburtsjahr}</td>
+                        <td>${st.geschlecht}</td>
+                        <td>${sprint}</td>
+                        <td>${sprung}</td>
+                        <td>${wurf}</td>
+                        <td>${ausdauer}</td>
+                        <td><strong>${gesamt}</strong></td>
+                        <td>${urkunde}</td>
+                        <td>${note}</td>
+                    </tr>
+                `;
+            });
+            
+            html += `
+                    </tbody>
+                </table>
+            `;
+            
+            printArea.innerHTML = html;
+            document.body.classList.add('print-active-area');
+            window.print();
+            document.body.classList.remove('print-active-area');
+        });
+    }
+
+    if (btnPrintDashboard) {
+        btnPrintDashboard.addEventListener('click', () => {
+            document.body.classList.add('print-dashboard-layout');
+            window.print();
+            document.body.classList.remove('print-dashboard-layout');
+        });
+    }
+
+    if (btnPrintTop3) {
+        btnPrintTop3.addEventListener('click', () => {
+            btnPrintTop3.disabled = true;
+            btnPrintTop3.textContent = 'Lade Daten...';
+            
+            fetch('api.php?action=get_top3')
+            .then(res => res.json())
+            .then(res => {
+                if (res.success) {
+                    let html = `
+                        <div class="print-header">
+                            <h2>Bundesjugendspiele 2026</h2>
+                            <p><strong>Die 3 Bestleistungen je Disziplin (Schulrekorde)</strong></p>
+                        </div>
+                    `;
+                    
+                    const events = [
+                        { key: 'punkte', name: '🏆 Mehrkampf (Gesamtpunkte)', desc: 'Beste Dreikampf-Ergebnisse (Mädchen / Jungen)' },
+                        { key: 'sprint', name: '⚡ Sprint', desc: 'Laufzeiten in Sekunden' },
+                        { key: 'sprung', name: '🦘 Weitsprung', desc: 'Sprungweite in Metern' },
+                        { key: 'wurf', name: '☄️ Weitwurf (Schlagball)', desc: 'Wurfweite in Metern' },
+                        { key: 'ausdauer', name: '🏃‍♂️ Ausdauerlauf', desc: 'Laufzeit in Minuten:Sekunden' }
+                    ];
+                    
+                    events.forEach(evt => {
+                        html += `
+                            <div class="print-highscore-section">
+                                <div class="print-highscore-title">${evt.name} <span style="font-size:9pt; font-weight:normal; text-transform:none; margin-left:10px;">${evt.desc}</span></div>
+                                <div class="print-highscore-grid">
+                                    <div>
+                                        <h4 style="margin-bottom:5px; font-size:10pt;">👩 Mädchen</h4>
+                                        <table class="print-table" style="margin: 0; width:100%;">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width: 15%;">Rang</th>
+                                                    <th>Name</th>
+                                                    <th style="width: 20%;">Klasse</th>
+                                                    <th style="width: 25%;">Leistung</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                        `;
+                        
+                        const girls = res[evt.key]?.W || [];
+                        for (let i = 0; i < 3; i++) {
+                            const row = girls[i];
+                            html += `
+                                <tr>
+                                    <td><strong>${i + 1}</strong></td>
+                                    <td>${row ? row.name : '-'}</td>
+                                    <td>${row ? row.klasse : '-'}</td>
+                                    <td><strong>${row ? row.leistung : '-'}</strong></td>
+                                </tr>
+                            `;
+                        }
+                        
+                        html += `
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <h4 style="margin-bottom:5px; font-size:10pt;">👨 Jungen</h4>
+                                        <table class="print-table" style="margin: 0; width:100%;">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width: 15%;">Rang</th>
+                                                    <th>Name</th>
+                                                    <th style="width: 20%;">Klasse</th>
+                                                    <th style="width: 25%;">Leistung</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                        `;
+                        
+                        const boys = res[evt.key]?.M || [];
+                        for (let i = 0; i < 3; i++) {
+                            const row = boys[i];
+                            html += `
+                                <tr>
+                                    <td><strong>${i + 1}</strong></td>
+                                    <td>${row ? row.name : '-'}</td>
+                                    <td>${row ? row.klasse : '-'}</td>
+                                    <td><strong>${row ? row.leistung : '-'}</strong></td>
+                                </tr>
+                            `;
+                        }
+                        
+                        html += `
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    
+                    printArea.innerHTML = html;
+                    document.body.classList.add('print-active-area');
+                    window.print();
+                    document.body.classList.remove('print-active-area');
+                }
+            })
+            .catch(err => {
+                console.error('Failed to load top 3 list:', err);
+                showToast('Bestenliste konnte nicht geladen werden.', 'error');
+            })
+            .finally(() => {
+                btnPrintTop3.disabled = false;
+                btnPrintTop3.textContent = '🏆 Bestenliste drucken (Top 3)';
+            });
+        });
+    }
 });
