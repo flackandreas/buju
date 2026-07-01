@@ -1,0 +1,11 @@
+services:
+  web:
+    build: .
+    container_name: buju_webapp
+    ports:
+      - "8085:80"
+    volumes:
+      - .:/var/www/html
+      # We ensure the SQLite database dir is mapped so the data persists on the host
+      - ./db:/var/www/html/db
+    restart: unless-stopped

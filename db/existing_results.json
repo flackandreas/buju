@@ -1,0 +1,3161 @@
+[
+  {
+    "klasse": "R5A",
+    "name": "Seifried",
+    "vorname": "Oskar",
+    "ausdauer": "04:25",
+    "sprint": "",
+    "sprung": 4.93,
+    "wurf": 34.5
+  },
+  {
+    "klasse": "R5A",
+    "name": "Gajic",
+    "vorname": "Aleksa",
+    "ausdauer": "05:36",
+    "sprint": "",
+    "sprung": 3.21,
+    "wurf": 22.5
+  },
+  {
+    "klasse": "R5A",
+    "name": "Keppel",
+    "vorname": "Amelia",
+    "ausdauer": "",
+    "sprint": 9.4,
+    "sprung": 3.01,
+    "wurf": 15.0
+  },
+  {
+    "klasse": "R5A",
+    "name": "Matos Martins",
+    "vorname": "Beatriz",
+    "ausdauer": "",
+    "sprint": 9.7,
+    "sprung": 2.61,
+    "wurf": 11.0
+  },
+  {
+    "klasse": "R5A",
+    "name": "Roso",
+    "vorname": "Dejan",
+    "ausdauer": "04:35",
+    "sprint": "",
+    "sprung": 3.09,
+    "wurf": 28.0
+  },
+  {
+    "klasse": "R5A",
+    "name": "Schuler",
+    "vorname": "Adrian",
+    "ausdauer": "04:28",
+    "sprint": "",
+    "sprung": 3.61,
+    "wurf": 23.0
+  },
+  {
+    "klasse": "R5A",
+    "name": "Waldvogel",
+    "vorname": "Finn",
+    "ausdauer": "",
+    "sprint": 7.2,
+    "sprung": 2.69,
+    "wurf": 19.0
+  },
+  {
+    "klasse": "R5A",
+    "name": "Le Roux",
+    "vorname": "Joel",
+    "ausdauer": "",
+    "sprint": 9.5,
+    "sprung": 2.81,
+    "wurf": 23.0
+  },
+  {
+    "klasse": "R5A",
+    "name": "Morina",
+    "vorname": "Lediona",
+    "ausdauer": "",
+    "sprint": 8.6,
+    "sprung": 3.69,
+    "wurf": 19.0
+  },
+  {
+    "klasse": "R5A",
+    "name": "Eiche",
+    "vorname": "Lene",
+    "ausdauer": "",
+    "sprint": 9.5,
+    "sprung": 2.89,
+    "wurf": 14.0
+  },
+  {
+    "klasse": "R5A",
+    "name": "Böttcher",
+    "vorname": "Lian",
+    "ausdauer": "04:49",
+    "sprint": "",
+    "sprung": 3.09,
+    "wurf": 23.0
+  },
+  {
+    "klasse": "R5A",
+    "name": "Hajdaraj",
+    "vorname": "Lorik",
+    "ausdauer": "04:30",
+    "sprint": "",
+    "sprung": 3.29,
+    "wurf": 24.5
+  },
+  {
+    "klasse": "R5A",
+    "name": "Kaltenbach",
+    "vorname": "Lucia",
+    "ausdauer": "",
+    "sprint": 10.2,
+    "sprung": 2.81,
+    "wurf": 18.0
+  },
+  {
+    "klasse": "R5A",
+    "name": "Herrman",
+    "vorname": "Marlon",
+    "ausdauer": "04:32",
+    "sprint": "",
+    "sprung": 3.21,
+    "wurf": 26.0
+  },
+  {
+    "klasse": "R5A",
+    "name": "Pieler",
+    "vorname": "Max",
+    "ausdauer": "04:18",
+    "sprint": "",
+    "sprung": 3.81,
+    "wurf": 40.0
+  },
+  {
+    "klasse": "R5A",
+    "name": "Lickert",
+    "vorname": "Mia",
+    "ausdauer": "",
+    "sprint": 8.5,
+    "sprung": 3.49,
+    "wurf": 19.0
+  },
+  {
+    "klasse": "R5A",
+    "name": "Ziuzina",
+    "vorname": "Milana",
+    "ausdauer": "",
+    "sprint": 9.4,
+    "sprung": 3.09,
+    "wurf": 10.0
+  },
+  {
+    "klasse": "R5A",
+    "name": "Kramer",
+    "vorname": "Mira",
+    "ausdauer": "",
+    "sprint": 10.8,
+    "sprung": 2.61,
+    "wurf": 15.5
+  },
+  {
+    "klasse": "R5A",
+    "name": "Magidi",
+    "vorname": "Mobina",
+    "ausdauer": "",
+    "sprint": 10.3,
+    "sprung": 2.69,
+    "wurf": 17.5
+  },
+  {
+    "klasse": "R5A",
+    "name": "Kaltschmidt",
+    "vorname": "Nelly",
+    "ausdauer": "03:39",
+    "sprint": "",
+    "sprung": "",
+    "wurf": 18.0
+  },
+  {
+    "klasse": "R5A",
+    "name": "Rogg",
+    "vorname": "Nico",
+    "ausdauer": "04:50",
+    "sprint": "",
+    "sprung": 3.09,
+    "wurf": 25.0
+  },
+  {
+    "klasse": "R5A",
+    "name": "Shahini",
+    "vorname": "Dion",
+    "ausdauer": "04:30",
+    "sprint": "",
+    "sprung": "",
+    "wurf": ""
+  },
+  {
+    "klasse": "R5A",
+    "name": "Uhlmann",
+    "vorname": "Paul",
+    "ausdauer": "",
+    "sprint": 9.4,
+    "sprung": 3.29,
+    "wurf": 26.0
+  },
+  {
+    "klasse": "R5A",
+    "name": "Birkle",
+    "vorname": "Teresa",
+    "ausdauer": "",
+    "sprint": 8.6,
+    "sprung": 3.41,
+    "wurf": 20.0
+  },
+  {
+    "klasse": "R5B",
+    "name": "Kleiser",
+    "vorname": "Alicia",
+    "ausdauer": "",
+    "sprint": 8.7,
+    "sprung": 3.21,
+    "wurf": 20.0
+  },
+  {
+    "klasse": "R5B",
+    "name": "Buchova",
+    "vorname": "Anna",
+    "ausdauer": "",
+    "sprint": 9.1,
+    "sprung": 3.01,
+    "wurf": 16.5
+  },
+  {
+    "klasse": "R5B",
+    "name": "Wider",
+    "vorname": "Anna-Maria",
+    "ausdauer": "03:06",
+    "sprint": "",
+    "sprung": 3.17,
+    "wurf": 19.0
+  },
+  {
+    "klasse": "R5B",
+    "name": "Jammali",
+    "vorname": "Elias",
+    "ausdauer": "4.38",
+    "sprint": "",
+    "sprung": 2.45,
+    "wurf": 20.5
+  },
+  {
+    "klasse": "R5B",
+    "name": "Omodion",
+    "vorname": "Grace",
+    "ausdauer": "",
+    "sprint": 7.8,
+    "sprung": 3.65,
+    "wurf": 17.5
+  },
+  {
+    "klasse": "R5B",
+    "name": "Zabel",
+    "vorname": "Hendrik",
+    "ausdauer": "05:10",
+    "sprint": "",
+    "sprung": 2.81,
+    "wurf": 25.0
+  },
+  {
+    "klasse": "R5B",
+    "name": "Gross",
+    "vorname": "Lea",
+    "ausdauer": "03:23",
+    "sprint": "",
+    "sprung": 3.29,
+    "wurf": 20.5
+  },
+  {
+    "klasse": "R5B",
+    "name": "Eidinger",
+    "vorname": "Leif",
+    "ausdauer": "",
+    "sprint": 9.1,
+    "sprung": 2.93,
+    "wurf": 21.0
+  },
+  {
+    "klasse": "R5B",
+    "name": "Jordan",
+    "vorname": "Lena",
+    "ausdauer": "04:22",
+    "sprint": "",
+    "sprung": 2.37,
+    "wurf": 9.0
+  },
+  {
+    "klasse": "R5B",
+    "name": "Frisch",
+    "vorname": "Mattis",
+    "ausdauer": "",
+    "sprint": 8.6,
+    "sprung": 3.33,
+    "wurf": 27.0
+  },
+  {
+    "klasse": "R5B",
+    "name": "Babanin",
+    "vorname": "Michelle",
+    "ausdauer": "",
+    "sprint": 7.7,
+    "sprung": 3.53,
+    "wurf": 27.0
+  },
+  {
+    "klasse": "R5B",
+    "name": "Saum",
+    "vorname": "Noela",
+    "ausdauer": "",
+    "sprint": 9.6,
+    "sprung": 2.81,
+    "wurf": 16.0
+  },
+  {
+    "klasse": "R5B",
+    "name": "Hodroj",
+    "vorname": "Rahiel",
+    "ausdauer": "",
+    "sprint": 9.1,
+    "sprung": 2.77,
+    "wurf": 14.0
+  },
+  {
+    "klasse": "R5B",
+    "name": "Schwär",
+    "vorname": "Sebastian",
+    "ausdauer": "03:45",
+    "sprint": "",
+    "sprung": 3.17,
+    "wurf": 24.0
+  },
+  {
+    "klasse": "R5B",
+    "name": "Fischer",
+    "vorname": "Stefanie",
+    "ausdauer": "04:39",
+    "sprint": "",
+    "sprung": 2.85,
+    "wurf": 13.5
+  },
+  {
+    "klasse": "R5B",
+    "name": "Postaci",
+    "vorname": "Tuana",
+    "ausdauer": "04:39",
+    "sprint": "",
+    "sprung": 2.37,
+    "wurf": 19.5
+  },
+  {
+    "klasse": "R5C",
+    "name": "Schmidt",
+    "vorname": "Anton",
+    "ausdauer": "",
+    "sprint": 7.8,
+    "sprung": 3.57,
+    "wurf": 27.0
+  },
+  {
+    "klasse": "R5C",
+    "name": "Vogelbacher",
+    "vorname": "Bruno",
+    "ausdauer": "",
+    "sprint": 9.6,
+    "sprung": 2.61,
+    "wurf": 22.5
+  },
+  {
+    "klasse": "R5C",
+    "name": "Knöpfle",
+    "vorname": "David",
+    "ausdauer": "",
+    "sprint": 8.6,
+    "sprung": 3.81,
+    "wurf": 24.0
+  },
+  {
+    "klasse": "R5C",
+    "name": "Baum",
+    "vorname": "Davina",
+    "ausdauer": "",
+    "sprint": 9.1,
+    "sprung": 3.09,
+    "wurf": 15.0
+  },
+  {
+    "klasse": "R5C",
+    "name": "Böhm",
+    "vorname": "Denny",
+    "ausdauer": "",
+    "sprint": 9.0,
+    "sprung": 2.69,
+    "wurf": 16.0
+  },
+  {
+    "klasse": "R5C",
+    "name": "Kleiser",
+    "vorname": "Elisa",
+    "ausdauer": "",
+    "sprint": 8.8,
+    "sprung": 2.97,
+    "wurf": 20.5
+  },
+  {
+    "klasse": "R5C",
+    "name": "Augustin",
+    "vorname": "Emely",
+    "ausdauer": "",
+    "sprint": 10.3,
+    "sprung": 2.37,
+    "wurf": 11.5
+  },
+  {
+    "klasse": "R5C",
+    "name": "Benz",
+    "vorname": "Felix",
+    "ausdauer": "",
+    "sprint": 8.2,
+    "sprung": 3.57,
+    "wurf": 26.0
+  },
+  {
+    "klasse": "R5C",
+    "name": "Jarusch",
+    "vorname": "Gabriel",
+    "ausdauer": "",
+    "sprint": 8.1,
+    "sprung": 3.21,
+    "wurf": 25.0
+  },
+  {
+    "klasse": "R5C",
+    "name": "Schwab",
+    "vorname": "Joshua",
+    "ausdauer": "",
+    "sprint": 9.2,
+    "sprung": 2.81,
+    "wurf": 18.5
+  },
+  {
+    "klasse": "R5C",
+    "name": "Hämmerle",
+    "vorname": "Julian",
+    "ausdauer": "",
+    "sprint": 9.9,
+    "sprung": 2.61,
+    "wurf": 22.5
+  },
+  {
+    "klasse": "R5C",
+    "name": "Skoda",
+    "vorname": "Luca",
+    "ausdauer": "",
+    "sprint": 8.4,
+    "sprung": 3.29,
+    "wurf": 22.0
+  },
+  {
+    "klasse": "R5C",
+    "name": "Lungoiu",
+    "vorname": "Lukas",
+    "ausdauer": "",
+    "sprint": 8.6,
+    "sprung": 3.61,
+    "wurf": 26.5
+  },
+  {
+    "klasse": "R5C",
+    "name": "Stenianskyi",
+    "vorname": "Maksym",
+    "ausdauer": "",
+    "sprint": 7.7,
+    "sprung": 3.29,
+    "wurf": 27.5
+  },
+  {
+    "klasse": "R5C",
+    "name": "Löffler",
+    "vorname": "Marla",
+    "ausdauer": "",
+    "sprint": 9.6,
+    "sprung": 2.57,
+    "wurf": 18.0
+  },
+  {
+    "klasse": "R5C",
+    "name": "Ochwat",
+    "vorname": "Marvin",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 1.49,
+    "wurf": 13.5
+  },
+  {
+    "klasse": "R5C",
+    "name": "Tkalec",
+    "vorname": "Matea",
+    "ausdauer": "",
+    "sprint": 9.1,
+    "sprung": 2.29,
+    "wurf": 14.5
+  },
+  {
+    "klasse": "R5C",
+    "name": "Kling",
+    "vorname": "Maxim",
+    "ausdauer": "",
+    "sprint": 8.2,
+    "sprung": 3.81,
+    "wurf": 25.5
+  },
+  {
+    "klasse": "R5C",
+    "name": "Petrovic",
+    "vorname": "Mia",
+    "ausdauer": "",
+    "sprint": 9.7,
+    "sprung": 2.09,
+    "wurf": 12.5
+  },
+  {
+    "klasse": "R5C",
+    "name": "Silic",
+    "vorname": "Nia",
+    "ausdauer": "",
+    "sprint": 8.9,
+    "sprung": 3.05,
+    "wurf": 11.5
+  },
+  {
+    "klasse": "R5C",
+    "name": "Benz",
+    "vorname": "Niklas",
+    "ausdauer": "",
+    "sprint": 8.7,
+    "sprung": 3.25,
+    "wurf": 28.0
+  },
+  {
+    "klasse": "R5C",
+    "name": "Winterhalder",
+    "vorname": "Paula",
+    "ausdauer": "",
+    "sprint": 8.7,
+    "sprung": 3.29,
+    "wurf": 14.0
+  },
+  {
+    "klasse": "R5C",
+    "name": "Ojebo",
+    "vorname": "Rebecca",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 1.69,
+    "wurf": 16.0
+  },
+  {
+    "klasse": "R5C",
+    "name": "Siedlarz",
+    "vorname": "Sami",
+    "ausdauer": "",
+    "sprint": 8.3,
+    "sprung": "",
+    "wurf": ""
+  },
+  {
+    "klasse": "R6A",
+    "name": "Kakpe",
+    "vorname": "Aboubacar",
+    "ausdauer": "04:16",
+    "sprint": "",
+    "sprung": 4.37,
+    "wurf": 38.0
+  },
+  {
+    "klasse": "R6A",
+    "name": "Dörflinger",
+    "vorname": "Ace",
+    "ausdauer": "",
+    "sprint": 10.0,
+    "sprung": 2.61,
+    "wurf": 17.5
+  },
+  {
+    "klasse": "R6A",
+    "name": "Kleiser",
+    "vorname": "Adrian",
+    "ausdauer": "04:19",
+    "sprint": "",
+    "sprung": 3.81,
+    "wurf": 24.0
+  },
+  {
+    "klasse": "R6A",
+    "name": "Winterhalder",
+    "vorname": "Adrion",
+    "ausdauer": "04:06",
+    "sprint": "",
+    "sprung": 3.65,
+    "wurf": 38.0
+  },
+  {
+    "klasse": "R6A",
+    "name": "Kleiser",
+    "vorname": "Amelie",
+    "ausdauer": "",
+    "sprint": 8.5,
+    "sprung": 3.09,
+    "wurf": 19.0
+  },
+  {
+    "klasse": "R6A",
+    "name": "Schneider",
+    "vorname": "Emilie",
+    "ausdauer": "",
+    "sprint": 8.0,
+    "sprung": 3.97,
+    "wurf": 20.5
+  },
+  {
+    "klasse": "R6A",
+    "name": "Kling",
+    "vorname": "Eric",
+    "ausdauer": "",
+    "sprint": 8.8,
+    "sprung": 3.57,
+    "wurf": 31.0
+  },
+  {
+    "klasse": "R6A",
+    "name": "Greiner-Adam",
+    "vorname": "Felix",
+    "ausdauer": "",
+    "sprint": 9.2,
+    "sprung": 3.05,
+    "wurf": 22.0
+  },
+  {
+    "klasse": "R6A",
+    "name": "Dreher",
+    "vorname": "Hannah",
+    "ausdauer": "",
+    "sprint": 9.6,
+    "sprung": 2.89,
+    "wurf": 12.5
+  },
+  {
+    "klasse": "R6A",
+    "name": "Basic",
+    "vorname": "Kerim",
+    "ausdauer": "",
+    "sprint": 7.2,
+    "sprung": 3.53,
+    "wurf": 45.0
+  },
+  {
+    "klasse": "R6A",
+    "name": "Hofmeier",
+    "vorname": "Lukas",
+    "ausdauer": "04:16",
+    "sprint": "",
+    "sprung": 3.37,
+    "wurf": 20.0
+  },
+  {
+    "klasse": "R6A",
+    "name": "Alyhya",
+    "vorname": "Malake",
+    "ausdauer": "",
+    "sprint": 10.3,
+    "sprung": 2.68,
+    "wurf": 17.5
+  },
+  {
+    "klasse": "R6A",
+    "name": "Kleiser",
+    "vorname": "Marcel",
+    "ausdauer": "",
+    "sprint": 9.0,
+    "sprung": 2.81,
+    "wurf": 29.0
+  },
+  {
+    "klasse": "R6A",
+    "name": "Kahlfeld",
+    "vorname": "Matteo",
+    "ausdauer": "",
+    "sprint": 9.3,
+    "sprung": 2.97,
+    "wurf": 14.5
+  },
+  {
+    "klasse": "R6A",
+    "name": "Fechtig",
+    "vorname": "Max",
+    "ausdauer": "04:18",
+    "sprint": "",
+    "sprung": 4.25,
+    "wurf": 23.0
+  },
+  {
+    "klasse": "R6A",
+    "name": "Böcke",
+    "vorname": "Maximilian",
+    "ausdauer": "",
+    "sprint": 8.4,
+    "sprung": 4.01,
+    "wurf": 31.0
+  },
+  {
+    "klasse": "R6A",
+    "name": "Sigwart",
+    "vorname": "Maximilian",
+    "ausdauer": "",
+    "sprint": 8.4,
+    "sprung": 3.45,
+    "wurf": 27.5
+  },
+  {
+    "klasse": "R6A",
+    "name": "Chahine",
+    "vorname": "Mila",
+    "ausdauer": "",
+    "sprint": 7.6,
+    "sprung": 3.97,
+    "wurf": 21.0
+  },
+  {
+    "klasse": "R6A",
+    "name": "Koop",
+    "vorname": "Nicole",
+    "ausdauer": "",
+    "sprint": 8.8,
+    "sprung": 3.65,
+    "wurf": 17.0
+  },
+  {
+    "klasse": "R6A",
+    "name": "Mainka",
+    "vorname": "Paulina",
+    "ausdauer": "",
+    "sprint": 8.2,
+    "sprung": 3.73,
+    "wurf": 18.5
+  },
+  {
+    "klasse": "R6A",
+    "name": "Eckert",
+    "vorname": "Ramona",
+    "ausdauer": "",
+    "sprint": 8.5,
+    "sprung": 3.01,
+    "wurf": 16.0
+  },
+  {
+    "klasse": "R6A",
+    "name": "Saggiomo",
+    "vorname": "Sofia",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 3.09,
+    "wurf": 21.0
+  },
+  {
+    "klasse": "R6A",
+    "name": "Ketterer",
+    "vorname": "Timo",
+    "ausdauer": "",
+    "sprint": "2026-04-08 00:00:00",
+    "sprung": 3.65,
+    "wurf": 29.0
+  },
+  {
+    "klasse": "R6A",
+    "name": "Fanari",
+    "vorname": "Vlada",
+    "ausdauer": "",
+    "sprint": 8.01,
+    "sprung": 3.65,
+    "wurf": 15.0
+  },
+  {
+    "klasse": "R6B",
+    "name": "Rombach",
+    "vorname": "Amelie",
+    "ausdauer": "",
+    "sprint": 9.8,
+    "sprung": 2.53,
+    "wurf": 15.5
+  },
+  {
+    "klasse": "R6B",
+    "name": "Elsner",
+    "vorname": "Amy",
+    "ausdauer": "04:44",
+    "sprint": "",
+    "sprung": 3.09,
+    "wurf": 12.0
+  },
+  {
+    "klasse": "R6B",
+    "name": "Hejri",
+    "vorname": "Asma",
+    "ausdauer": "",
+    "sprint": 8.6,
+    "sprung": 3.25,
+    "wurf": 17.5
+  },
+  {
+    "klasse": "R6B",
+    "name": "Adisa",
+    "vorname": "Ayomide",
+    "ausdauer": "",
+    "sprint": 8.1,
+    "sprung": 3.53,
+    "wurf": 21.5
+  },
+  {
+    "klasse": "R6B",
+    "name": "Kaufhold",
+    "vorname": "Cataleya",
+    "ausdauer": "",
+    "sprint": 10.3,
+    "sprung": 2.33,
+    "wurf": 10.0
+  },
+  {
+    "klasse": "R6B",
+    "name": "Wehrle",
+    "vorname": "Corinna",
+    "ausdauer": "",
+    "sprint": 9.0,
+    "sprung": 3.21,
+    "wurf": 14.0
+  },
+  {
+    "klasse": "R6B",
+    "name": "Skoda",
+    "vorname": "Daria",
+    "ausdauer": "03:17",
+    "sprint": "",
+    "sprung": 3.33,
+    "wurf": 16.0
+  },
+  {
+    "klasse": "R6B",
+    "name": "Nikitin",
+    "vorname": "Elias",
+    "ausdauer": "06:03",
+    "sprint": "",
+    "sprung": 2.85,
+    "wurf": 15.0
+  },
+  {
+    "klasse": "R6B",
+    "name": "Schneider",
+    "vorname": "Felix",
+    "ausdauer": "",
+    "sprint": 13.8,
+    "sprung": 2.33,
+    "wurf": 16.5
+  },
+  {
+    "klasse": "R6B",
+    "name": "Kleiser",
+    "vorname": "Jakob",
+    "ausdauer": "",
+    "sprint": 8.8,
+    "sprung": 3.81,
+    "wurf": 23.0
+  },
+  {
+    "klasse": "R6B",
+    "name": "Löffler",
+    "vorname": "Jannis",
+    "ausdauer": "",
+    "sprint": 8.4,
+    "sprung": 3.01,
+    "wurf": 19.0
+  },
+  {
+    "klasse": "R6B",
+    "name": "Beese",
+    "vorname": "Johanna",
+    "ausdauer": "",
+    "sprint": 9.0,
+    "sprung": 3.21,
+    "wurf": 11.5
+  },
+  {
+    "klasse": "R6B",
+    "name": "Kulikov",
+    "vorname": "Lea",
+    "ausdauer": "04:29",
+    "sprint": "",
+    "sprung": 2.61,
+    "wurf": 15.5
+  },
+  {
+    "klasse": "R6B",
+    "name": "Sevcenko",
+    "vorname": "Leoni",
+    "ausdauer": "",
+    "sprint": 9.2,
+    "sprung": 3.17,
+    "wurf": 16.5
+  },
+  {
+    "klasse": "R6B",
+    "name": "Spiegelhalter",
+    "vorname": "Lina",
+    "ausdauer": "03:15",
+    "sprint": "",
+    "sprung": 3.65,
+    "wurf": 14.5
+  },
+  {
+    "klasse": "R6B",
+    "name": "Stiebjahn",
+    "vorname": "Luis",
+    "ausdauer": "",
+    "sprint": 8.6,
+    "sprung": 3.09,
+    "wurf": 27.0
+  },
+  {
+    "klasse": "R6B",
+    "name": "Ketterer",
+    "vorname": "Marina",
+    "ausdauer": "",
+    "sprint": 10.5,
+    "sprung": 2.05,
+    "wurf": 15.0
+  },
+  {
+    "klasse": "R6B",
+    "name": "Muherina",
+    "vorname": "Melina",
+    "ausdauer": "",
+    "sprint": 9.2,
+    "sprung": 2.97,
+    "wurf": 20.0
+  },
+  {
+    "klasse": "R6B",
+    "name": "Ganz",
+    "vorname": "Mia",
+    "ausdauer": "",
+    "sprint": 8.2,
+    "sprung": 2.93,
+    "wurf": 12.5
+  },
+  {
+    "klasse": "R6B",
+    "name": "Emde",
+    "vorname": "Milan",
+    "ausdauer": "04:07",
+    "sprint": "",
+    "sprung": 3.81,
+    "wurf": 27.0
+  },
+  {
+    "klasse": "R6B",
+    "name": "Wursthorn",
+    "vorname": "Nora",
+    "ausdauer": "",
+    "sprint": 10.7,
+    "sprung": 2.53,
+    "wurf": 5.0
+  },
+  {
+    "klasse": "R6B",
+    "name": "Dunn",
+    "vorname": "Oliver",
+    "ausdauer": "03:44",
+    "sprint": "",
+    "sprung": 3.01,
+    "wurf": 31.5
+  },
+  {
+    "klasse": "R6B",
+    "name": "Mayer",
+    "vorname": "Oliver",
+    "ausdauer": "",
+    "sprint": 7.6,
+    "sprung": 3.13,
+    "wurf": 29.0
+  },
+  {
+    "klasse": "R6B",
+    "name": "Nyirö",
+    "vorname": "Panna",
+    "ausdauer": "",
+    "sprint": 8.9,
+    "sprung": 2.93,
+    "wurf": 12.0
+  },
+  {
+    "klasse": "R6B",
+    "name": "Kraus",
+    "vorname": "Paul",
+    "ausdauer": "",
+    "sprint": 9.5,
+    "sprung": 2.85,
+    "wurf": 22.5
+  },
+  {
+    "klasse": "R6B",
+    "name": "Ruiz-Huber",
+    "vorname": "Sarah",
+    "ausdauer": "",
+    "sprint": 10.0,
+    "sprung": 3.33,
+    "wurf": 13.5
+  },
+  {
+    "klasse": "R6B",
+    "name": "Kuttruff",
+    "vorname": "Sascha",
+    "ausdauer": "",
+    "sprint": 9.2,
+    "sprung": 3.29,
+    "wurf": 17.5
+  },
+  {
+    "klasse": "R6B",
+    "name": "Steiert",
+    "vorname": "Simon",
+    "ausdauer": "",
+    "sprint": 7.8,
+    "sprung": 3.73,
+    "wurf": 18.5
+  },
+  {
+    "klasse": "R6C",
+    "name": "Winterhalter",
+    "vorname": "Carina-Sofia",
+    "ausdauer": "",
+    "sprint": 8.5,
+    "sprung": 3.05,
+    "wurf": 20.5
+  },
+  {
+    "klasse": "R6C",
+    "name": "Schell",
+    "vorname": "Emilian",
+    "ausdauer": "",
+    "sprint": 7.9,
+    "sprung": 3.09,
+    "wurf": 23.0
+  },
+  {
+    "klasse": "R6C",
+    "name": "Osas",
+    "vorname": "Favour",
+    "ausdauer": "",
+    "sprint": 7.2,
+    "sprung": 4.21,
+    "wurf": 21.0
+  },
+  {
+    "klasse": "R6C",
+    "name": "Rudigier",
+    "vorname": "Jackie",
+    "ausdauer": "",
+    "sprint": 8.1,
+    "sprung": 3.21,
+    "wurf": 25.5
+  },
+  {
+    "klasse": "R6C",
+    "name": "Reinauer",
+    "vorname": "Johan",
+    "ausdauer": "",
+    "sprint": 9.1,
+    "sprung": 2.81,
+    "wurf": 25.0
+  },
+  {
+    "klasse": "R6C",
+    "name": "Kaltenbach",
+    "vorname": "Jonas",
+    "ausdauer": "03:42",
+    "sprint": "",
+    "sprung": 3.69,
+    "wurf": 30.0
+  },
+  {
+    "klasse": "R6C",
+    "name": "Hofmeier",
+    "vorname": "Jonne",
+    "ausdauer": "",
+    "sprint": 8.3,
+    "sprung": 3.89,
+    "wurf": 29.0
+  },
+  {
+    "klasse": "R6C",
+    "name": "Pfaff",
+    "vorname": "Joschua",
+    "ausdauer": "",
+    "sprint": 7.2,
+    "sprung": 3.57,
+    "wurf": 35.5
+  },
+  {
+    "klasse": "R6C",
+    "name": "Matt",
+    "vorname": "Julian",
+    "ausdauer": "",
+    "sprint": 9.8,
+    "sprung": 2.81,
+    "wurf": 33.5
+  },
+  {
+    "klasse": "R6C",
+    "name": "Skrobo",
+    "vorname": "Jure",
+    "ausdauer": "",
+    "sprint": 9.4,
+    "sprung": 2.89,
+    "wurf": 26.0
+  },
+  {
+    "klasse": "R6C",
+    "name": "Tkalec",
+    "vorname": "Leo",
+    "ausdauer": "",
+    "sprint": 11.3,
+    "sprung": 2.01,
+    "wurf": 23.5
+  },
+  {
+    "klasse": "R6C",
+    "name": "Dudas",
+    "vorname": "Leona",
+    "ausdauer": "",
+    "sprint": 9.9,
+    "sprung": 2.29,
+    "wurf": 26.0
+  },
+  {
+    "klasse": "R6C",
+    "name": "Gut",
+    "vorname": "Levin",
+    "ausdauer": "03:50",
+    "sprint": "",
+    "sprung": 3.61,
+    "wurf": 33.5
+  },
+  {
+    "klasse": "R6C",
+    "name": "Belmokaddem",
+    "vorname": "Lina",
+    "ausdauer": "",
+    "sprint": 10.6,
+    "sprung": 2.29,
+    "wurf": 14.5
+  },
+  {
+    "klasse": "R6C",
+    "name": "Duri",
+    "vorname": "Linus",
+    "ausdauer": "",
+    "sprint": 8.2,
+    "sprung": 3.89,
+    "wurf": 21.5
+  },
+  {
+    "klasse": "R6C",
+    "name": "Ketterer",
+    "vorname": "Luisa",
+    "ausdauer": "",
+    "sprint": 8.5,
+    "sprung": 3.01,
+    "wurf": 14.0
+  },
+  {
+    "klasse": "R6C",
+    "name": "Lakmann",
+    "vorname": "Maxim",
+    "ausdauer": "",
+    "sprint": 9.0,
+    "sprung": 3.01,
+    "wurf": 25.5
+  },
+  {
+    "klasse": "R6C",
+    "name": "Müller",
+    "vorname": "Minela",
+    "ausdauer": "",
+    "sprint": 9.5,
+    "sprung": 3.49,
+    "wurf": 15.5
+  },
+  {
+    "klasse": "R6C",
+    "name": "Bekdezell",
+    "vorname": "Mubben",
+    "ausdauer": "05:28",
+    "sprint": 8.3,
+    "sprung": 2.89,
+    "wurf": 21.0
+  },
+  {
+    "klasse": "R6C",
+    "name": "Höftmann",
+    "vorname": "Nico",
+    "ausdauer": "",
+    "sprint": 8.3,
+    "sprung": 3.29,
+    "wurf": 44.0
+  },
+  {
+    "klasse": "R6C",
+    "name": "Pidhorna",
+    "vorname": "Polina",
+    "ausdauer": "",
+    "sprint": 8.6,
+    "sprung": 3.41,
+    "wurf": 18.0
+  },
+  {
+    "klasse": "R6C",
+    "name": "Voitenko",
+    "vorname": "Rynat",
+    "ausdauer": "",
+    "sprint": 8.7,
+    "sprung": 3.09,
+    "wurf": 43.0
+  },
+  {
+    "klasse": "R6C",
+    "name": "Peters",
+    "vorname": "Shauna",
+    "ausdauer": "",
+    "sprint": 10.2,
+    "sprung": 2.81,
+    "wurf": 15.5
+  },
+  {
+    "klasse": "R6C",
+    "name": "Fedotova",
+    "vorname": "Viktoria",
+    "ausdauer": "",
+    "sprint": 9.3,
+    "sprung": 2.61,
+    "wurf": 14.5
+  },
+  {
+    "klasse": "R6C",
+    "name": "Peksen",
+    "vorname": "Yagmur",
+    "ausdauer": "",
+    "sprint": 8.5,
+    "sprung": 2.89,
+    "wurf": 21.0
+  },
+  {
+    "klasse": "R6C",
+    "name": "Al Fahd",
+    "vorname": "Yasin",
+    "ausdauer": "",
+    "sprint": 10.4,
+    "sprung": 1.69,
+    "wurf": 23.0
+  },
+  {
+    "klasse": "R6C",
+    "name": "Sabir",
+    "vorname": "Yasmine",
+    "ausdauer": "",
+    "sprint": 9.2,
+    "sprung": 2.81,
+    "wurf": 21.0
+  },
+  {
+    "klasse": "R7A",
+    "name": "Pröll",
+    "vorname": "Alina",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 2.93,
+    "wurf": 17.0
+  },
+  {
+    "klasse": "R7A",
+    "name": "Trenkle",
+    "vorname": "Ben",
+    "ausdauer": "",
+    "sprint": 12.9,
+    "sprung": 3.17,
+    "wurf": 27.0
+  },
+  {
+    "klasse": "R7A",
+    "name": "Fehrenbach",
+    "vorname": "Daniel",
+    "ausdauer": "",
+    "sprint": 12.9,
+    "sprung": 3.17,
+    "wurf": 23.5
+  },
+  {
+    "klasse": "R7A",
+    "name": "Schätzle",
+    "vorname": "Eliah",
+    "ausdauer": "",
+    "sprint": 15.5,
+    "sprung": 2.17,
+    "wurf": 10.0
+  },
+  {
+    "klasse": "R7A",
+    "name": "Moor",
+    "vorname": "Kristina",
+    "ausdauer": "",
+    "sprint": 13.0,
+    "sprung": 3.01,
+    "wurf": 25.5
+  },
+  {
+    "klasse": "R7A",
+    "name": "Köhler",
+    "vorname": "Lars",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 3.21,
+    "wurf": 23.5
+  },
+  {
+    "klasse": "R7A",
+    "name": "Kirmair",
+    "vorname": "Lennox",
+    "ausdauer": "",
+    "sprint": 12.1,
+    "sprung": 3.61,
+    "wurf": 32.0
+  },
+  {
+    "klasse": "R7A",
+    "name": "Schätzle",
+    "vorname": "Leon",
+    "ausdauer": "",
+    "sprint": 10.4,
+    "sprung": 4.41,
+    "wurf": 33.5
+  },
+  {
+    "klasse": "R7A",
+    "name": "Banmiller",
+    "vorname": "Linus",
+    "ausdauer": "",
+    "sprint": 12.0,
+    "sprung": 3.45,
+    "wurf": 28.0
+  },
+  {
+    "klasse": "R7A",
+    "name": "Katava",
+    "vorname": "Luka",
+    "ausdauer": "",
+    "sprint": 11.3,
+    "sprung": 2.93,
+    "wurf": 27.0
+  },
+  {
+    "klasse": "R7A",
+    "name": "Koba",
+    "vorname": "Mark",
+    "ausdauer": "",
+    "sprint": 11.7,
+    "sprung": 3.41,
+    "wurf": 22.0
+  },
+  {
+    "klasse": "R7A",
+    "name": "Müller",
+    "vorname": "Maximilian",
+    "ausdauer": "",
+    "sprint": 11.9,
+    "sprung": 3.21,
+    "wurf": 27.5
+  },
+  {
+    "klasse": "R7A",
+    "name": "Jarusch",
+    "vorname": "Patrik",
+    "ausdauer": "04:08",
+    "sprint": "",
+    "sprung": 4.13,
+    "wurf": 34.0
+  },
+  {
+    "klasse": "R7A",
+    "name": "Ruiz-Huber",
+    "vorname": "Rayan",
+    "ausdauer": "05:07",
+    "sprint": "",
+    "sprung": 2.81,
+    "wurf": 23.0
+  },
+  {
+    "klasse": "R7A",
+    "name": "Frenzel",
+    "vorname": "Sunny",
+    "ausdauer": "",
+    "sprint": 13.0,
+    "sprung": 2.41,
+    "wurf": 16.0
+  },
+  {
+    "klasse": "R7A",
+    "name": "Schwörer",
+    "vorname": "Tilo",
+    "ausdauer": "04:20",
+    "sprint": "",
+    "sprung": 3.13,
+    "wurf": 23.0
+  },
+  {
+    "klasse": "R7A",
+    "name": "Kling",
+    "vorname": "Vanessa",
+    "ausdauer": "",
+    "sprint": 12.4,
+    "sprung": 3.13,
+    "wurf": 17.0
+  },
+  {
+    "klasse": "R7A",
+    "name": "Nikolov",
+    "vorname": "Vitomir",
+    "ausdauer": "04:00",
+    "sprint": "",
+    "sprung": "",
+    "wurf": 23.0
+  },
+  {
+    "klasse": "R7A",
+    "name": "Pfaff",
+    "vorname": "Yannis",
+    "ausdauer": "",
+    "sprint": 13.0,
+    "sprung": 3.73,
+    "wurf": 23.5
+  },
+  {
+    "klasse": "R7B",
+    "name": "Peine",
+    "vorname": "Alina",
+    "ausdauer": "",
+    "sprint": 13.3,
+    "sprung": 2.93,
+    "wurf": 14.5
+  },
+  {
+    "klasse": "R7B",
+    "name": "Pisoi",
+    "vorname": "Andreri-Alexandru",
+    "ausdauer": "04:03",
+    "sprint": "",
+    "sprung": 3.69,
+    "wurf": 25.0
+  },
+  {
+    "klasse": "R7B",
+    "name": "Furtwängler",
+    "vorname": "Anna",
+    "ausdauer": "",
+    "sprint": 13.1,
+    "sprung": 2.89,
+    "wurf": 18.0
+  },
+  {
+    "klasse": "R7B",
+    "name": "Schwarz",
+    "vorname": "Anna Sofia",
+    "ausdauer": "",
+    "sprint": 13.7,
+    "sprung": 3.29,
+    "wurf": 19.5
+  },
+  {
+    "klasse": "R7B",
+    "name": "Heitzmann",
+    "vorname": "Aylin",
+    "ausdauer": "",
+    "sprint": 11.5,
+    "sprung": 3.41,
+    "wurf": 24.5
+  },
+  {
+    "klasse": "R7B",
+    "name": "Bailly",
+    "vorname": "Cedric",
+    "ausdauer": "",
+    "sprint": 10.9,
+    "sprung": 4.05,
+    "wurf": 37.0
+  },
+  {
+    "klasse": "R7B",
+    "name": "Winterhalder",
+    "vorname": "Christopher",
+    "ausdauer": "06:15",
+    "sprint": "",
+    "sprung": 2.13,
+    "wurf": 20.5
+  },
+  {
+    "klasse": "R7B",
+    "name": "Schwörer",
+    "vorname": "Elina",
+    "ausdauer": "",
+    "sprint": 13.1,
+    "sprung": 2.89,
+    "wurf": 14.5
+  },
+  {
+    "klasse": "R7B",
+    "name": "Ritter",
+    "vorname": "Emelie",
+    "ausdauer": "",
+    "sprint": 14.2,
+    "sprung": 2.65,
+    "wurf": 19.0
+  },
+  {
+    "klasse": "R7B",
+    "name": "Frisch",
+    "vorname": "Emma",
+    "ausdauer": "",
+    "sprint": 12.9,
+    "sprung": 3.13,
+    "wurf": 13.5
+  },
+  {
+    "klasse": "R7B",
+    "name": "Stahl",
+    "vorname": "Joshua",
+    "ausdauer": "",
+    "sprint": 12.6,
+    "sprung": 3.81,
+    "wurf": 28.0
+  },
+  {
+    "klasse": "R7B",
+    "name": "Schwär",
+    "vorname": "Julia",
+    "ausdauer": "",
+    "sprint": 12.5,
+    "sprung": 3.49,
+    "wurf": 19.0
+  },
+  {
+    "klasse": "R7B",
+    "name": "Breuer",
+    "vorname": "Kiana",
+    "ausdauer": "",
+    "sprint": 12.1,
+    "sprung": 3.17,
+    "wurf": 12.0
+  },
+  {
+    "klasse": "R7B",
+    "name": "Ketterer",
+    "vorname": "Laura",
+    "ausdauer": "",
+    "sprint": 12.2,
+    "sprung": 3.65,
+    "wurf": 21.0
+  },
+  {
+    "klasse": "R7B",
+    "name": "Kramer",
+    "vorname": "Lea",
+    "ausdauer": "02:46",
+    "sprint": 13.6,
+    "sprung": 2.61,
+    "wurf": 19.5
+  },
+  {
+    "klasse": "R7B",
+    "name": "Dura",
+    "vorname": "Lilian",
+    "ausdauer": "",
+    "sprint": 11.6,
+    "sprung": 3.69,
+    "wurf": 18.0
+  },
+  {
+    "klasse": "R7B",
+    "name": "Heine",
+    "vorname": "Linda",
+    "ausdauer": "",
+    "sprint": 12.1,
+    "sprung": 3.61,
+    "wurf": 20.0
+  },
+  {
+    "klasse": "R7B",
+    "name": "Hättich",
+    "vorname": "Louis",
+    "ausdauer": "04:48",
+    "sprint": "",
+    "sprung": 3.89,
+    "wurf": 34.5
+  },
+  {
+    "klasse": "R7B",
+    "name": "Fries-Beckmann",
+    "vorname": "Lu",
+    "ausdauer": "",
+    "sprint": 11.7,
+    "sprung": 3.33,
+    "wurf": 31.5
+  },
+  {
+    "klasse": "R7B",
+    "name": "Lipphardt",
+    "vorname": "Lukas",
+    "ausdauer": "03:58",
+    "sprint": "",
+    "sprung": 4.45,
+    "wurf": 31.5
+  },
+  {
+    "klasse": "R7B",
+    "name": "Uetz",
+    "vorname": "Marvin",
+    "ausdauer": "",
+    "sprint": 11.2,
+    "sprung": 4.21,
+    "wurf": 40.5
+  },
+  {
+    "klasse": "R7B",
+    "name": "Waldvogel",
+    "vorname": "Mia",
+    "ausdauer": "",
+    "sprint": 16.1,
+    "sprung": 2.09,
+    "wurf": 14.0
+  },
+  {
+    "klasse": "R7B",
+    "name": "Volk",
+    "vorname": "Michael",
+    "ausdauer": "04:00",
+    "sprint": "",
+    "sprung": 3.17,
+    "wurf": 27.5
+  },
+  {
+    "klasse": "R7B",
+    "name": "Wangler",
+    "vorname": "Selina",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 3.49,
+    "wurf": 19.0
+  },
+  {
+    "klasse": "R7B",
+    "name": "Rohrer",
+    "vorname": "Sina",
+    "ausdauer": "",
+    "sprint": 12.0,
+    "sprung": 3.37,
+    "wurf": 18.0
+  },
+  {
+    "klasse": "R7B",
+    "name": "Drogan",
+    "vorname": "Zoe",
+    "ausdauer": "",
+    "sprint": 15.5,
+    "sprung": 2.05,
+    "wurf": 14.0
+  },
+  {
+    "klasse": "R7C",
+    "name": "Saurer",
+    "vorname": "Daniel",
+    "ausdauer": "",
+    "sprint": 13.4,
+    "sprung": 3.21,
+    "wurf": 28.0
+  },
+  {
+    "klasse": "R7C",
+    "name": "Winterhalter",
+    "vorname": "Finn",
+    "ausdauer": "",
+    "sprint": 14.8,
+    "sprung": 2.89,
+    "wurf": 16.0
+  },
+  {
+    "klasse": "R7C",
+    "name": "Radu",
+    "vorname": "Gabriel",
+    "ausdauer": "05:32",
+    "sprint": "",
+    "sprung": 2.13,
+    "wurf": 18.0
+  },
+  {
+    "klasse": "R7C",
+    "name": "Maier",
+    "vorname": "Kilian",
+    "ausdauer": "",
+    "sprint": 11.4,
+    "sprung": 3.81,
+    "wurf": 30.0
+  },
+  {
+    "klasse": "R7C",
+    "name": "Spiegelhalter",
+    "vorname": "Kilian",
+    "ausdauer": "03:53",
+    "sprint": "",
+    "sprung": 4.17,
+    "wurf": 27.0
+  },
+  {
+    "klasse": "R7C",
+    "name": "Hog",
+    "vorname": "Laura",
+    "ausdauer": "02:56",
+    "sprint": "",
+    "sprung": 3.13,
+    "wurf": 14.0
+  },
+  {
+    "klasse": "R7C",
+    "name": "Götz",
+    "vorname": "Laurin",
+    "ausdauer": "",
+    "sprint": 11.3,
+    "sprung": 4.13,
+    "wurf": 23.0
+  },
+  {
+    "klasse": "R7C",
+    "name": "Spiegelhalter",
+    "vorname": "Laurin",
+    "ausdauer": "",
+    "sprint": 11.9,
+    "sprung": 4.13,
+    "wurf": 33.0
+  },
+  {
+    "klasse": "R7C",
+    "name": "Winterhalder",
+    "vorname": "Levinja",
+    "ausdauer": "",
+    "sprint": 12.8,
+    "sprung": 2.81,
+    "wurf": 15.0
+  },
+  {
+    "klasse": "R7C",
+    "name": "Isele",
+    "vorname": "Linus",
+    "ausdauer": "04:03",
+    "sprint": "",
+    "sprung": 2.93,
+    "wurf": 22.0
+  },
+  {
+    "klasse": "R7C",
+    "name": "Haas",
+    "vorname": "Marlon",
+    "ausdauer": "",
+    "sprint": 12.3,
+    "sprung": 3.53,
+    "wurf": 18.0
+  },
+  {
+    "klasse": "R7C",
+    "name": "Fehrenbach",
+    "vorname": "Matteo",
+    "ausdauer": "",
+    "sprint": 12.0,
+    "sprung": 3.57,
+    "wurf": 30.0
+  },
+  {
+    "klasse": "R7C",
+    "name": "Ketterer",
+    "vorname": "Melina",
+    "ausdauer": "",
+    "sprint": 12.4,
+    "sprung": 3.09,
+    "wurf": 18.0
+  },
+  {
+    "klasse": "R7C",
+    "name": "Wehrle",
+    "vorname": "Moritz",
+    "ausdauer": "",
+    "sprint": 11.1,
+    "sprung": 4.25,
+    "wurf": 34.0
+  },
+  {
+    "klasse": "R7C",
+    "name": "Böttcher",
+    "vorname": "Noah",
+    "ausdauer": "04:39",
+    "sprint": "",
+    "sprung": 3.53,
+    "wurf": 20.0
+  },
+  {
+    "klasse": "R7C",
+    "name": "Bauer",
+    "vorname": "Oliver",
+    "ausdauer": "",
+    "sprint": 11.0,
+    "sprung": 4.13,
+    "wurf": 35.0
+  },
+  {
+    "klasse": "R7C",
+    "name": "Beladjal",
+    "vorname": "Oussama",
+    "ausdauer": "",
+    "sprint": 13.1,
+    "sprung": 2.85,
+    "wurf": 7.5
+  },
+  {
+    "klasse": "R7C",
+    "name": "Marx",
+    "vorname": "Paul",
+    "ausdauer": "05:00",
+    "sprint": "",
+    "sprung": 2.93,
+    "wurf": 19.0
+  },
+  {
+    "klasse": "R7C",
+    "name": "Strübe",
+    "vorname": "Tarja",
+    "ausdauer": "",
+    "sprint": 11.5,
+    "sprung": 3.05,
+    "wurf": 23.0
+  },
+  {
+    "klasse": "R7D",
+    "name": "Berrehouma",
+    "vorname": "Amina",
+    "ausdauer": "05:20",
+    "sprint": "",
+    "sprung": 2.37,
+    "wurf": 12.0
+  },
+  {
+    "klasse": "R7D",
+    "name": "Shabani",
+    "vorname": "Elton",
+    "ausdauer": "",
+    "sprint": 13.5,
+    "sprung": 3.13,
+    "wurf": 18.5
+  },
+  {
+    "klasse": "R7D",
+    "name": "Babijanski",
+    "vorname": "Ena",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 2.49,
+    "wurf": 12.5
+  },
+  {
+    "klasse": "R7D",
+    "name": "Kramer",
+    "vorname": "Finn",
+    "ausdauer": "",
+    "sprint": 12.3,
+    "sprung": 3.85,
+    "wurf": 25.5
+  },
+  {
+    "klasse": "R7D",
+    "name": "Al Fahd",
+    "vorname": "Hamza",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 2.69,
+    "wurf": 19.0
+  },
+  {
+    "klasse": "R7D",
+    "name": "Borodulin",
+    "vorname": "Iwan",
+    "ausdauer": "",
+    "sprint": 12.2,
+    "sprung": 4.01,
+    "wurf": 22.0
+  },
+  {
+    "klasse": "R7D",
+    "name": "Dunn",
+    "vorname": "Kilian",
+    "ausdauer": "03:31",
+    "sprint": "",
+    "sprung": 4.17,
+    "wurf": 26.0
+  },
+  {
+    "klasse": "R7D",
+    "name": "Weiß",
+    "vorname": "Lea",
+    "ausdauer": "",
+    "sprint": 13.1,
+    "sprung": 3.45,
+    "wurf": 19.5
+  },
+  {
+    "klasse": "R7D",
+    "name": "Kisser",
+    "vorname": "Liam",
+    "ausdauer": "",
+    "sprint": 11.7,
+    "sprung": 4.13,
+    "wurf": 34.0
+  },
+  {
+    "klasse": "R7D",
+    "name": "Ackermann",
+    "vorname": "Luke",
+    "ausdauer": "",
+    "sprint": 12.2,
+    "sprung": 4.01,
+    "wurf": 33.5
+  },
+  {
+    "klasse": "R7D",
+    "name": "Rudigier",
+    "vorname": "Melina",
+    "ausdauer": "",
+    "sprint": 13.0,
+    "sprung": 3.51,
+    "wurf": 18.0
+  },
+  {
+    "klasse": "R7D",
+    "name": "Kopfmann",
+    "vorname": "Michelle",
+    "ausdauer": "",
+    "sprint": 11.8,
+    "sprung": 3.77,
+    "wurf": 21.5
+  },
+  {
+    "klasse": "R7D",
+    "name": "De Min",
+    "vorname": "Milo",
+    "ausdauer": "",
+    "sprint": 11.8,
+    "sprung": 3.81,
+    "wurf": 32.5
+  },
+  {
+    "klasse": "R7D",
+    "name": "Del Mundo",
+    "vorname": "Nacet",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 2.89,
+    "wurf": 18.0
+  },
+  {
+    "klasse": "R7D",
+    "name": "Rexhepi",
+    "vorname": "Rahim",
+    "ausdauer": "",
+    "sprint": 11.4,
+    "sprung": 3.93,
+    "wurf": 23.5
+  },
+  {
+    "klasse": "R8A",
+    "name": "Stettner",
+    "vorname": "Adrian",
+    "ausdauer": "",
+    "sprint": 13.5,
+    "sprung": 3.69,
+    "wurf": 21.0
+  },
+  {
+    "klasse": "R8A",
+    "name": "Mark",
+    "vorname": "Amelie",
+    "ausdauer": "",
+    "sprint": 11.8,
+    "sprung": 3.17,
+    "wurf": 15.5
+  },
+  {
+    "klasse": "R8A",
+    "name": "Dreher",
+    "vorname": "Domenic",
+    "ausdauer": "",
+    "sprint": 11.4,
+    "sprung": 3.57,
+    "wurf": 33.0
+  },
+  {
+    "klasse": "R8A",
+    "name": "Hättich",
+    "vorname": "Felix",
+    "ausdauer": "",
+    "sprint": 11.3,
+    "sprung": 4.29,
+    "wurf": 35.0
+  },
+  {
+    "klasse": "R8A",
+    "name": "Jakupi",
+    "vorname": "Feliza",
+    "ausdauer": "",
+    "sprint": 14.8,
+    "sprung": 2.29,
+    "wurf": 12.0
+  },
+  {
+    "klasse": "R8A",
+    "name": "Mügge",
+    "vorname": "Jasmin",
+    "ausdauer": "",
+    "sprint": 12.3,
+    "sprung": 3.69,
+    "wurf": 19.0
+  },
+  {
+    "klasse": "R8A",
+    "name": "Fehrenbach",
+    "vorname": "Johanna Alina",
+    "ausdauer": "",
+    "sprint": 12.4,
+    "sprung": 3.09,
+    "wurf": 17.0
+  },
+  {
+    "klasse": "R8A",
+    "name": "Schuler",
+    "vorname": "Josephin",
+    "ausdauer": "",
+    "sprint": 12.0,
+    "sprung": 3.37,
+    "wurf": 14.5
+  },
+  {
+    "klasse": "R8A",
+    "name": "Lickert",
+    "vorname": "Kim",
+    "ausdauer": "03:11",
+    "sprint": "",
+    "sprung": 3.41,
+    "wurf": 25.0
+  },
+  {
+    "klasse": "R8A",
+    "name": "Diehm",
+    "vorname": "Lova",
+    "ausdauer": "",
+    "sprint": 12.9,
+    "sprung": 2.97,
+    "wurf": 23.0
+  },
+  {
+    "klasse": "R8A",
+    "name": "Klein",
+    "vorname": "Luna",
+    "ausdauer": "02:56",
+    "sprint": "",
+    "sprung": 3.81,
+    "wurf": 11.5
+  },
+  {
+    "klasse": "R8A",
+    "name": "Litovchenko",
+    "vorname": "Matwej",
+    "ausdauer": "",
+    "sprint": 13.5,
+    "sprung": 3.25,
+    "wurf": 18.5
+  },
+  {
+    "klasse": "R8A",
+    "name": "Lickert",
+    "vorname": "Moritz",
+    "ausdauer": "",
+    "sprint": 11.0,
+    "sprung": 4.01,
+    "wurf": 26.0
+  },
+  {
+    "klasse": "R8A",
+    "name": "Kelm",
+    "vorname": "Riana",
+    "ausdauer": "",
+    "sprint": 13.8,
+    "sprung": 2.97,
+    "wurf": 13.0
+  },
+  {
+    "klasse": "R8A",
+    "name": "Ginsheimer",
+    "vorname": "Sofija",
+    "ausdauer": "",
+    "sprint": 11.5,
+    "sprung": 3.61,
+    "wurf": 21.0
+  },
+  {
+    "klasse": "R8A",
+    "name": "Stich",
+    "vorname": "Tamira",
+    "ausdauer": "",
+    "sprint": 12.3,
+    "sprung": 3.09,
+    "wurf": 21.0
+  },
+  {
+    "klasse": "R8A",
+    "name": "Dachtler",
+    "vorname": "Tobias",
+    "ausdauer": "",
+    "sprint": 11.6,
+    "sprung": 4.09,
+    "wurf": 37.0
+  },
+  {
+    "klasse": "R8A",
+    "name": "Andris",
+    "vorname": "Vinzent Lennart",
+    "ausdauer": "",
+    "sprint": 10.6,
+    "sprung": 4.45,
+    "wurf": 36.0
+  },
+  {
+    "klasse": "R8B",
+    "name": "Straub",
+    "vorname": "Benjamin",
+    "ausdauer": "",
+    "sprint": 11.4,
+    "sprung": 4.29,
+    "wurf": 25.5
+  },
+  {
+    "klasse": "R8B",
+    "name": "Wickenburg",
+    "vorname": "Dana",
+    "ausdauer": "",
+    "sprint": 13.0,
+    "sprung": 3.21,
+    "wurf": 17.0
+  },
+  {
+    "klasse": "R8B",
+    "name": "Hog",
+    "vorname": "Elia",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 3.97,
+    "wurf": 28.5
+  },
+  {
+    "klasse": "R8B",
+    "name": "Herling",
+    "vorname": "Felix",
+    "ausdauer": "",
+    "sprint": 10.7,
+    "sprung": 4.69,
+    "wurf": 36.5
+  },
+  {
+    "klasse": "R8B",
+    "name": "Waldvogel",
+    "vorname": "Fenja",
+    "ausdauer": "",
+    "sprint": 12.4,
+    "sprung": 3.01,
+    "wurf": 17.5
+  },
+  {
+    "klasse": "R8B",
+    "name": "Di Bello",
+    "vorname": "Gianluca",
+    "ausdauer": "",
+    "sprint": 12.9,
+    "sprung": 3.53,
+    "wurf": 22.5
+  },
+  {
+    "klasse": "R8B",
+    "name": "Gabriele",
+    "vorname": "Ilaria",
+    "ausdauer": "",
+    "sprint": 12.9,
+    "sprung": 2.81,
+    "wurf": 14.5
+  },
+  {
+    "klasse": "R8B",
+    "name": "Roso",
+    "vorname": "Ivan Mateo",
+    "ausdauer": "",
+    "sprint": 10.6,
+    "sprung": 4.09,
+    "wurf": 40.0
+  },
+  {
+    "klasse": "R8B",
+    "name": "Bläsing",
+    "vorname": "Jan",
+    "ausdauer": "",
+    "sprint": 12.2,
+    "sprung": 3.81,
+    "wurf": 23.5
+  },
+  {
+    "klasse": "R8B",
+    "name": "Emde",
+    "vorname": "Janosch",
+    "ausdauer": "03:32",
+    "sprint": "",
+    "sprung": 3.97,
+    "wurf": 30.5
+  },
+  {
+    "klasse": "R8B",
+    "name": "Dell",
+    "vorname": "Lea",
+    "ausdauer": "",
+    "sprint": 14.2,
+    "sprung": 2.69,
+    "wurf": 16.5
+  },
+  {
+    "klasse": "R8B",
+    "name": "Waitkuwait",
+    "vorname": "Lilja",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 4.93,
+    "wurf": 38.0
+  },
+  {
+    "klasse": "R8B",
+    "name": "Willmann",
+    "vorname": "Lisann",
+    "ausdauer": "",
+    "sprint": 12.9,
+    "sprung": 2.93,
+    "wurf": 16.0
+  },
+  {
+    "klasse": "R8B",
+    "name": "Gross",
+    "vorname": "Luca Manuel",
+    "ausdauer": "",
+    "sprint": 13.0,
+    "sprung": 3.69,
+    "wurf": 30.0
+  },
+  {
+    "klasse": "R8B",
+    "name": "Stiebjahn",
+    "vorname": "Lukas",
+    "ausdauer": "",
+    "sprint": 12.3,
+    "sprung": 3.53,
+    "wurf": 31.0
+  },
+  {
+    "klasse": "R8B",
+    "name": "Kaltenbach",
+    "vorname": "Martha",
+    "ausdauer": "02:53",
+    "sprint": "",
+    "sprung": 3.65,
+    "wurf": 33.0
+  },
+  {
+    "klasse": "R8B",
+    "name": "Wehrle",
+    "vorname": "Selina",
+    "ausdauer": "03:10",
+    "sprint": "",
+    "sprung": "",
+    "wurf": ""
+  },
+  {
+    "klasse": "R8B",
+    "name": "von Nordheim",
+    "vorname": "Sonik",
+    "ausdauer": "03:53",
+    "sprint": "",
+    "sprung": 4.09,
+    "wurf": 34.0
+  },
+  {
+    "klasse": "R8C",
+    "name": "Wohllaib",
+    "vorname": "Anessa",
+    "ausdauer": "",
+    "sprint": 13.4,
+    "sprung": 3.53,
+    "wurf": 15.5
+  },
+  {
+    "klasse": "R8C",
+    "name": "Willmann",
+    "vorname": "Anni",
+    "ausdauer": "",
+    "sprint": 12.4,
+    "sprung": 4.09,
+    "wurf": 23.0
+  },
+  {
+    "klasse": "R8C",
+    "name": "Schwab",
+    "vorname": "David",
+    "ausdauer": "03:52",
+    "sprint": "",
+    "sprung": 4.33,
+    "wurf": 38.0
+  },
+  {
+    "klasse": "R8C",
+    "name": "Tritschler",
+    "vorname": "Emelie",
+    "ausdauer": "",
+    "sprint": 14.0,
+    "sprung": 2.93,
+    "wurf": 14.0
+  },
+  {
+    "klasse": "R8C",
+    "name": "Palmieri",
+    "vorname": "Giuseppe Andrea",
+    "ausdauer": "04:21",
+    "sprint": "",
+    "sprung": 3.73,
+    "wurf": 37.0
+  },
+  {
+    "klasse": "R8C",
+    "name": "Schmidt",
+    "vorname": "Johann Michael",
+    "ausdauer": "",
+    "sprint": 15.1,
+    "sprung": 3.13,
+    "wurf": 27.0
+  },
+  {
+    "klasse": "R8C",
+    "name": "Frey",
+    "vorname": "Jonas",
+    "ausdauer": "",
+    "sprint": 13.9,
+    "sprung": 3.13,
+    "wurf": 28.5
+  },
+  {
+    "klasse": "R8C",
+    "name": "Greiner-Adam",
+    "vorname": "Jonas",
+    "ausdauer": "",
+    "sprint": 13.1,
+    "sprung": 4.49,
+    "wurf": 21.0
+  },
+  {
+    "klasse": "R8C",
+    "name": "Kovalenko",
+    "vorname": "Konstantin",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 4.01,
+    "wurf": 17.5
+  },
+  {
+    "klasse": "R8C",
+    "name": "Spitz",
+    "vorname": "Louis",
+    "ausdauer": "",
+    "sprint": 10.8,
+    "sprung": 3.97,
+    "wurf": 36.0
+  },
+  {
+    "klasse": "R8C",
+    "name": "Schmidt",
+    "vorname": "Luca Steve",
+    "ausdauer": "",
+    "sprint": 11.5,
+    "sprung": 4.01,
+    "wurf": 35.0
+  },
+  {
+    "klasse": "R8C",
+    "name": "Ketterer",
+    "vorname": "Marvin",
+    "ausdauer": "",
+    "sprint": 11.2,
+    "sprung": 4.6,
+    "wurf": 42.0
+  },
+  {
+    "klasse": "R8C",
+    "name": "Vogelbacher",
+    "vorname": "Max",
+    "ausdauer": "",
+    "sprint": 10.9,
+    "sprung": 3.57,
+    "wurf": 22.0
+  },
+  {
+    "klasse": "R8C",
+    "name": "Staiger",
+    "vorname": "Quentin",
+    "ausdauer": "",
+    "sprint": 10.0,
+    "sprung": "",
+    "wurf": 35.0
+  },
+  {
+    "klasse": "R8C",
+    "name": "Beese",
+    "vorname": "Sebastian",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 3.89,
+    "wurf": ""
+  },
+  {
+    "klasse": "R8C",
+    "name": "Funk",
+    "vorname": "Sebastian Alexander",
+    "ausdauer": "",
+    "sprint": 11.8,
+    "sprung": 4.05,
+    "wurf": 22.0
+  },
+  {
+    "klasse": "R8C",
+    "name": "Kubik",
+    "vorname": "Thomas",
+    "ausdauer": "03:56",
+    "sprint": "",
+    "sprung": 4.53,
+    "wurf": 37.0
+  },
+  {
+    "klasse": "R8D",
+    "name": "Molnar",
+    "vorname": "Bank",
+    "ausdauer": "",
+    "sprint": 12.0,
+    "sprung": 3.97,
+    "wurf": 19.5
+  },
+  {
+    "klasse": "R8D",
+    "name": "Kleiser",
+    "vorname": "Colin Alexander",
+    "ausdauer": "",
+    "sprint": 12.8,
+    "sprung": 3.65,
+    "wurf": 33.0
+  },
+  {
+    "klasse": "R8D",
+    "name": "Hoch",
+    "vorname": "David",
+    "ausdauer": "",
+    "sprint": 9.7,
+    "sprung": 4.25,
+    "wurf": 26.0
+  },
+  {
+    "klasse": "R8D",
+    "name": "Magidi",
+    "vorname": "Fabian",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 3.7,
+    "wurf": 34.0
+  },
+  {
+    "klasse": "R8D",
+    "name": "Giacomazzo",
+    "vorname": "Immanuel",
+    "ausdauer": "",
+    "sprint": 11.3,
+    "sprung": 4.13,
+    "wurf": 31.0
+  },
+  {
+    "klasse": "R8D",
+    "name": "Rexhepi",
+    "vorname": "Ismail",
+    "ausdauer": "",
+    "sprint": 13.0,
+    "sprung": 3.41,
+    "wurf": 23.0
+  },
+  {
+    "klasse": "R8D",
+    "name": "Schätzle",
+    "vorname": "Lennard",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 3.69,
+    "wurf": 31.0
+  },
+  {
+    "klasse": "R8D",
+    "name": "Wehrle",
+    "vorname": "Levin",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 3.61,
+    "wurf": 33.0
+  },
+  {
+    "klasse": "R8D",
+    "name": "Karimi",
+    "vorname": "Lida",
+    "ausdauer": "",
+    "sprint": 14.3,
+    "sprung": 2.5,
+    "wurf": 11.0
+  },
+  {
+    "klasse": "R8D",
+    "name": "Kranendonk",
+    "vorname": "Luca",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": "",
+    "wurf": 25.0
+  },
+  {
+    "klasse": "R8D",
+    "name": "Müller",
+    "vorname": "Miko",
+    "ausdauer": "",
+    "sprint": 11.2,
+    "sprung": 3.81,
+    "wurf": 24.0
+  },
+  {
+    "klasse": "R8D",
+    "name": "Ganter",
+    "vorname": "Nadine",
+    "ausdauer": "",
+    "sprint": 11.6,
+    "sprung": 4.09,
+    "wurf": 20.5
+  },
+  {
+    "klasse": "R8D",
+    "name": "Klein",
+    "vorname": "Nikita",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 3.41,
+    "wurf": 29.0
+  },
+  {
+    "klasse": "R8D",
+    "name": "Gottwald",
+    "vorname": "Robert",
+    "ausdauer": "",
+    "sprint": 10.6,
+    "sprung": 3.89,
+    "wurf": 32.0
+  },
+  {
+    "klasse": "R8D",
+    "name": "Mykytiuk",
+    "vorname": "Vasyl",
+    "ausdauer": "",
+    "sprint": 11.8,
+    "sprung": 3.69,
+    "wurf": 29.0
+  },
+  {
+    "klasse": "R9A",
+    "name": "El Kaati Srhiri",
+    "vorname": "Anas",
+    "ausdauer": "03:34",
+    "sprint": "",
+    "sprung": 4.53,
+    "wurf": 37.5
+  },
+  {
+    "klasse": "R9A",
+    "name": "Dold",
+    "vorname": "Anna",
+    "ausdauer": "",
+    "sprint": 11.2,
+    "sprung": 4.13,
+    "wurf": 25.0
+  },
+  {
+    "klasse": "R9A",
+    "name": "Kurz",
+    "vorname": "Charlotta",
+    "ausdauer": "",
+    "sprint": 10.8,
+    "sprung": 4.41,
+    "wurf": 23.0
+  },
+  {
+    "klasse": "R9A",
+    "name": "Duttlinger",
+    "vorname": "Connor",
+    "ausdauer": "",
+    "sprint": 10.8,
+    "sprung": 4.33,
+    "wurf": 23.0
+  },
+  {
+    "klasse": "R9A",
+    "name": "Kleiser",
+    "vorname": "Dana",
+    "ausdauer": "",
+    "sprint": 10.5,
+    "sprung": 4.61,
+    "wurf": 22.5
+  },
+  {
+    "klasse": "R9A",
+    "name": "Ayyoubi",
+    "vorname": "Elham",
+    "ausdauer": "03:24",
+    "sprint": 4.41,
+    "sprung": 25.5,
+    "wurf": 25.5
+  },
+  {
+    "klasse": "R9A",
+    "name": "Maier",
+    "vorname": "Finn",
+    "ausdauer": "",
+    "sprint": 12.0,
+    "sprung": 3.53,
+    "wurf": 27.5
+  },
+  {
+    "klasse": "R9A",
+    "name": "Walter",
+    "vorname": "Hannah",
+    "ausdauer": "",
+    "sprint": 11.4,
+    "sprung": 3.93,
+    "wurf": 35.0
+  },
+  {
+    "klasse": "R9A",
+    "name": "Faulstich",
+    "vorname": "Jayden",
+    "ausdauer": "",
+    "sprint": 10.7,
+    "sprung": 4.13,
+    "wurf": 30.5
+  },
+  {
+    "klasse": "R9A",
+    "name": "Saier",
+    "vorname": "Lina",
+    "ausdauer": "",
+    "sprint": 12.3,
+    "sprung": 3.41,
+    "wurf": 20.0
+  },
+  {
+    "klasse": "R9A",
+    "name": "Willmann",
+    "vorname": "Lukas",
+    "ausdauer": "",
+    "sprint": 10.9,
+    "sprung": 4.41,
+    "wurf": 31.0
+  },
+  {
+    "klasse": "R9A",
+    "name": "Schönfeld",
+    "vorname": "Maleen",
+    "ausdauer": "",
+    "sprint": 11.0,
+    "sprung": 4.01,
+    "wurf": 24.0
+  },
+  {
+    "klasse": "R9A",
+    "name": "Braun",
+    "vorname": "Marie-Christin",
+    "ausdauer": "",
+    "sprint": 14.0,
+    "sprung": "",
+    "wurf": 13.5
+  },
+  {
+    "klasse": "R9A",
+    "name": "Fehrenbach",
+    "vorname": "Salome",
+    "ausdauer": "03:13",
+    "sprint": 11.6,
+    "sprung": 3.53,
+    "wurf": 18.0
+  },
+  {
+    "klasse": "R9A",
+    "name": "Schuler",
+    "vorname": "Theresa",
+    "ausdauer": "",
+    "sprint": 11.6,
+    "sprung": 3.93,
+    "wurf": 18.0
+  },
+  {
+    "klasse": "R9A",
+    "name": "Hättich",
+    "vorname": "Timon",
+    "ausdauer": "",
+    "sprint": 11.3,
+    "sprung": 3.93,
+    "wurf": 31.5
+  },
+  {
+    "klasse": "R9A",
+    "name": "Bilokur",
+    "vorname": "Yeva",
+    "ausdauer": "",
+    "sprint": 11.2,
+    "sprung": 4.21,
+    "wurf": 18.0
+  },
+  {
+    "klasse": "R9B",
+    "name": "Schanz",
+    "vorname": "Aris",
+    "ausdauer": "",
+    "sprint": 11.2,
+    "sprung": 4.33,
+    "wurf": 35.0
+  },
+  {
+    "klasse": "R9B",
+    "name": "Kratzner",
+    "vorname": "Arvid",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 4.65,
+    "wurf": 38.0
+  },
+  {
+    "klasse": "R9B",
+    "name": "Balint",
+    "vorname": "Boglarka",
+    "ausdauer": "",
+    "sprint": 12.6,
+    "sprung": 3.29,
+    "wurf": 15.0
+  },
+  {
+    "klasse": "R9B",
+    "name": "De Lima Wettlin",
+    "vorname": "Daniel",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 4.13,
+    "wurf": 35.0
+  },
+  {
+    "klasse": "R9B",
+    "name": "de Sousa",
+    "vorname": "Elias",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 4.53,
+    "wurf": 39.0
+  },
+  {
+    "klasse": "R9B",
+    "name": "Rombach",
+    "vorname": "Felix",
+    "ausdauer": "",
+    "sprint": 10.4,
+    "sprung": 4.73,
+    "wurf": 36.0
+  },
+  {
+    "klasse": "R9B",
+    "name": "Anusic",
+    "vorname": "Gabriella",
+    "ausdauer": "",
+    "sprint": 13.6,
+    "sprung": 3.01,
+    "wurf": 19.0
+  },
+  {
+    "klasse": "R9B",
+    "name": "Dautbegovic",
+    "vorname": "Haris",
+    "ausdauer": "",
+    "sprint": 10.7,
+    "sprung": 3.85,
+    "wurf": 29.0
+  },
+  {
+    "klasse": "R9B",
+    "name": "Rudigier",
+    "vorname": "Lars",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 4.29,
+    "wurf": 45.0
+  },
+  {
+    "klasse": "R9B",
+    "name": "Tritschler",
+    "vorname": "Luis",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 5.09,
+    "wurf": 39.0
+  },
+  {
+    "klasse": "R9B",
+    "name": "Kovalov",
+    "vorname": "Matvey",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 4.01,
+    "wurf": 30.0
+  },
+  {
+    "klasse": "R9B",
+    "name": "Müller",
+    "vorname": "Monja",
+    "ausdauer": "",
+    "sprint": 13.9,
+    "sprung": 3.41,
+    "wurf": 13.0
+  },
+  {
+    "klasse": "R9B",
+    "name": "Krüger",
+    "vorname": "Nele",
+    "ausdauer": "",
+    "sprint": 12.6,
+    "sprung": 3.69,
+    "wurf": 18.0
+  },
+  {
+    "klasse": "R9B",
+    "name": "Wissler",
+    "vorname": "Nils",
+    "ausdauer": "",
+    "sprint": 10.7,
+    "sprung": 4.97,
+    "wurf": 53.0
+  },
+  {
+    "klasse": "R9B",
+    "name": "Wolf",
+    "vorname": "Noah",
+    "ausdauer": "",
+    "sprint": 10.7,
+    "sprung": 3.97,
+    "wurf": 51.0
+  },
+  {
+    "klasse": "R9B",
+    "name": "Rodrigues Borges",
+    "vorname": "Pedro",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": 3.41,
+    "wurf": 33.0
+  },
+  {
+    "klasse": "R9B",
+    "name": "Fabig",
+    "vorname": "Tristan",
+    "ausdauer": "04:38",
+    "sprint": "",
+    "sprung": 3.13,
+    "wurf": 23.0
+  },
+  {
+    "klasse": "R9B",
+    "name": "Dura",
+    "vorname": "Valerie",
+    "ausdauer": "",
+    "sprint": 11.2,
+    "sprung": 3.81,
+    "wurf": 19.0
+  },
+  {
+    "klasse": "R9C",
+    "name": "Kalinger",
+    "vorname": "Davis",
+    "ausdauer": "",
+    "sprint": 9.7,
+    "sprung": "",
+    "wurf": 44.0
+  },
+  {
+    "klasse": "R9C",
+    "name": "Zulfic",
+    "vorname": "Emir",
+    "ausdauer": "",
+    "sprint": 10.2,
+    "sprung": "",
+    "wurf": 51.0
+  },
+  {
+    "klasse": "R9C",
+    "name": "Zähringer",
+    "vorname": "Jan",
+    "ausdauer": "",
+    "sprint": 9.8,
+    "sprung": 34.0,
+    "wurf": 34.0
+  },
+  {
+    "klasse": "R9C",
+    "name": "Gök",
+    "vorname": "Kerem",
+    "ausdauer": "",
+    "sprint": 12.4,
+    "sprung": "",
+    "wurf": 31.0
+  },
+  {
+    "klasse": "R9C",
+    "name": "Hättich",
+    "vorname": "Marius Robert",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": "",
+    "wurf": 31.0
+  },
+  {
+    "klasse": "R9C",
+    "name": "Ummenhofer",
+    "vorname": "Silas",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": "",
+    "wurf": 46.5
+  },
+  {
+    "klasse": "R9C",
+    "name": "Lorenz",
+    "vorname": "Theo",
+    "ausdauer": "",
+    "sprint": 10.7,
+    "sprung": "",
+    "wurf": 29.5
+  },
+  {
+    "klasse": "R9D",
+    "name": "Jäckle",
+    "vorname": "Benjamin",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": "",
+    "wurf": 52.0
+  },
+  {
+    "klasse": "R9D",
+    "name": "Schall",
+    "vorname": "Dennis",
+    "ausdauer": "",
+    "sprint": 9.7,
+    "sprung": "",
+    "wurf": 36.5
+  },
+  {
+    "klasse": "R9D",
+    "name": "Stahl",
+    "vorname": "Dustin",
+    "ausdauer": "",
+    "sprint": 10.6,
+    "sprung": "",
+    "wurf": 33.0
+  },
+  {
+    "klasse": "R9D",
+    "name": "Waldvogel",
+    "vorname": "Eleni",
+    "ausdauer": "",
+    "sprint": 11.6,
+    "sprung": "",
+    "wurf": 17.5
+  },
+  {
+    "klasse": "R9D",
+    "name": "Kleiser",
+    "vorname": "Fabienne",
+    "ausdauer": "",
+    "sprint": 11.4,
+    "sprung": "",
+    "wurf": 16.5
+  },
+  {
+    "klasse": "R9D",
+    "name": "Denaro",
+    "vorname": "Francesco",
+    "ausdauer": "",
+    "sprint": 12.3,
+    "sprung": "",
+    "wurf": 28.5
+  },
+  {
+    "klasse": "R9D",
+    "name": "Günther",
+    "vorname": "Lars",
+    "ausdauer": "",
+    "sprint": 11.8,
+    "sprung": "",
+    "wurf": 33.5
+  },
+  {
+    "klasse": "R9D",
+    "name": "Faller",
+    "vorname": "Lena",
+    "ausdauer": "",
+    "sprint": 11.4,
+    "sprung": "",
+    "wurf": 19.5
+  },
+  {
+    "klasse": "R9D",
+    "name": "Hämmerle",
+    "vorname": "Lena",
+    "ausdauer": "",
+    "sprint": 12.9,
+    "sprung": "",
+    "wurf": 16.5
+  },
+  {
+    "klasse": "R9D",
+    "name": "Dujakovic",
+    "vorname": "Leon",
+    "ausdauer": "",
+    "sprint": 10.4,
+    "sprung": "",
+    "wurf": 45.0
+  },
+  {
+    "klasse": "R9D",
+    "name": "Jashanica",
+    "vorname": "Leon",
+    "ausdauer": "",
+    "sprint": 10.4,
+    "sprung": "",
+    "wurf": 50.0
+  },
+  {
+    "klasse": "R9D",
+    "name": "Heizmann",
+    "vorname": "Lilli",
+    "ausdauer": "",
+    "sprint": 9.9,
+    "sprung": "",
+    "wurf": 26.5
+  },
+  {
+    "klasse": "R9D",
+    "name": "Neudecker",
+    "vorname": "Louis",
+    "ausdauer": "",
+    "sprint": 11.7,
+    "sprung": "",
+    "wurf": 32.0
+  },
+  {
+    "klasse": "R9D",
+    "name": "Moor",
+    "vorname": "Maxim",
+    "ausdauer": "",
+    "sprint": 11.4,
+    "sprung": "",
+    "wurf": 36.5
+  },
+  {
+    "klasse": "R9D",
+    "name": "Rombach",
+    "vorname": "Meike",
+    "ausdauer": "",
+    "sprint": 11.2,
+    "sprung": "",
+    "wurf": 17.5
+  },
+  {
+    "klasse": "R9D",
+    "name": "Zengler",
+    "vorname": "Milan",
+    "ausdauer": "",
+    "sprint": "",
+    "sprung": "",
+    "wurf": 34.0
+  },
+  {
+    "klasse": "R9D",
+    "name": "Ruf",
+    "vorname": "Nele",
+    "ausdauer": "",
+    "sprint": 13.9,
+    "sprung": "",
+    "wurf": 13.0
+  },
+  {
+    "klasse": "R9D",
+    "name": "Rudiger",
+    "vorname": "Ole",
+    "ausdauer": "03:30",
+    "sprint": "",
+    "sprung": "",
+    "wurf": 35.0
+  },
+  {
+    "klasse": "R9D",
+    "name": "Nobs",
+    "vorname": "Raphael",
+    "ausdauer": "",
+    "sprint": 11.8,
+    "sprung": "",
+    "wurf": 36.5
+  }
+]

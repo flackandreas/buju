@@ -1,0 +1,21 @@
+# SQLite Database
+db/buju.sqlite
+db/buju.sqlite-journal
+db/buju.sqlite-shm
+db/buju.sqlite-wal
+
+# macOS
+.DS_Store
+
+# Python virtual environment
+buju_env/
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Local backup / dev files
+*.log
+buju.csv
+buju_pub.csv
+buju_gviz.csv
