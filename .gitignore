@@ -19,3 +19,4 @@ __pycache__/
 buju.csv
 buju_pub.csv
 buju_gviz.csv
+*.pdf

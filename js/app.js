@@ -1131,17 +1131,23 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             
             printArea.innerHTML = html;
+            const originalTitle = document.title;
+            document.title = `BJS_2026_Klassenliste_${currentClass}`;
             document.body.classList.add('print-active-area');
             window.print();
             document.body.classList.remove('print-active-area');
+            document.title = originalTitle;
         });
     }
 
     if (btnPrintDashboard) {
         btnPrintDashboard.addEventListener('click', () => {
+            const originalTitle = document.title;
+            document.title = "BJS_2026_Dashboard";
             document.body.classList.add('print-dashboard-layout');
             window.print();
             document.body.classList.remove('print-dashboard-layout');
+            document.title = originalTitle;
         });
     }
 
@@ -1242,9 +1248,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                     
                     printArea.innerHTML = html;
+                    const originalTitle = document.title;
+                    document.title = "BJS_2026_Bestenliste_Top3";
                     document.body.classList.add('print-active-area');
                     window.print();
                     document.body.classList.remove('print-active-area');
+                    document.title = originalTitle;
                 }
             })
             .catch(err => {
