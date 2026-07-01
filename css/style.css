@@ -1373,7 +1373,7 @@ body {
     }
 
     body.print-dashboard-layout .chart-container {
-        height: 180px !important;
+        height: 240px !important;
     }
     
     body.print-dashboard-layout .details-card {
