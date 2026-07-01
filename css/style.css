@@ -1297,7 +1297,8 @@ body {
     /* Dashboard Print Styles */
     body.print-dashboard-layout .sidebar,
     body.print-dashboard-layout .topbar,
-    body.print-dashboard-layout .print-actions-row {
+    body.print-dashboard-layout .print-actions-row,
+    body.print-dashboard-layout .sidebar-footer {
         display: none !important;
     }
     
@@ -1307,68 +1308,112 @@ body {
         transform: none !important;
     }
     
+    body.print-dashboard-layout .kpi-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 10px !important;
+        margin-bottom: 20px !important;
+    }
+    
     body.print-dashboard-layout .kpi-card {
         background: #FFF !important;
         color: #000 !important;
         border: 1px solid #000 !important;
+        border-radius: 8px !important;
         box-shadow: none !important;
-        margin-bottom: 10px;
-        float: left;
-        width: 23%;
-        margin-right: 2%;
+        padding: 10px 12px !important;
+        margin-bottom: 0 !important;
+        float: none !important;
+        width: auto !important;
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
     }
     
-    body.print-dashboard-layout .kpi-card:last-child {
-        margin-right: 0;
+    body.print-dashboard-layout .kpi-icon-bg {
+        display: none !important;
     }
     
-    body.print-dashboard-layout .kpi-value,
-    body.print-dashboard-layout .kpi-label,
-    body.print-dashboard-layout .kpi-subtext {
+    body.print-dashboard-layout .kpi-value {
+        font-size: 16pt !important;
         color: #000 !important;
+    }
+    
+    body.print-dashboard-layout .kpi-label {
+        font-size: 8.5pt !important;
+        color: #333 !important;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    
+    body.print-dashboard-layout .kpi-subtext {
+        font-size: 8pt !important;
+        color: #555 !important;
     }
     
     body.print-dashboard-layout .charts-grid {
-        clear: both;
-        display: block;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 20px !important;
+        margin-bottom: 20px !important;
+        clear: both !important;
     }
     
     body.print-dashboard-layout .chart-card {
-        width: 48%;
-        float: left;
-        margin-right: 4%;
-        margin-bottom: 20px;
+        background: #FFF !important;
+        border: 1px solid #000 !important;
+        border-radius: 8px !important;
+        padding: 12px !important;
+        margin-bottom: 0 !important;
+        float: none !important;
+        width: auto !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
     }
-    
-    body.print-dashboard-layout .chart-card:last-child {
-        margin-right: 0;
+
+    body.print-dashboard-layout .chart-container {
+        height: 180px !important;
     }
     
     body.print-dashboard-layout .details-card {
-        clear: both;
         background: #FFF !important;
         border: 1px solid #000 !important;
+        border-radius: 8px !important;
+        padding: 12px !important;
         box-shadow: none !important;
         color: #000 !important;
         page-break-inside: avoid;
-        margin-bottom: 20px;
+        margin-bottom: 20px !important;
+        clear: both !important;
     }
     
     body.print-dashboard-layout .chart-card h4,
     body.print-dashboard-layout .details-card h4 {
         color: #000 !important;
+        font-size: 11pt !important;
+        margin-bottom: 10px !important;
         border-bottom: 1px solid #000;
-        padding-bottom: 5px;
+        padding-bottom: 4px;
+    }
+    
+    body.print-dashboard-layout .data-table {
+        margin: 0 !important;
+    }
+
+    body.print-dashboard-layout .data-table th,
+    body.print-dashboard-layout .data-table td {
+        padding: 6px 8px !important;
+        font-size: 9pt !important;
+        border: 1px solid #000 !important;
     }
     
     body.print-dashboard-layout .data-table th {
         background-color: #F3F4F6 !important;
         color: #000 !important;
-        border: 1px solid #000 !important;
     }
     
     body.print-dashboard-layout .data-table td {
         color: #000 !important;
-        border: 1px solid #000 !important;
     }
 }
