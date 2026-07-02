@@ -29,6 +29,31 @@ try {
     
     <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Global JS error logger for debugging -->
+    <script>
+        window.onerror = function(message, source, lineno, colno, error) {
+            const errDiv = document.createElement('div');
+            errDiv.style.position = 'fixed';
+            errDiv.style.bottom = '10px';
+            errDiv.style.right = '10px';
+            errDiv.style.background = '#EF4444';
+            errDiv.style.color = '#FFF';
+            errDiv.style.padding = '16px';
+            errDiv.style.borderRadius = '8px';
+            errDiv.style.zIndex = '999999';
+            errDiv.style.maxWidth = '400px';
+            errDiv.style.boxShadow = '0 10px 15px rgba(0,0,0,0.3)';
+            errDiv.errDetails = error ? error.stack : message;
+            errDiv.innerHTML = '<strong>JS Error:</strong> ' + message + ' at ' + lineno + ':' + colno + '<br><small style="opacity:0.8;">Klicken zum Kopieren</small>';
+            errDiv.onclick = function() {
+                navigator.clipboard.writeText(errDiv.errDetails);
+                alert('Stacktrace in Zwischenablage kopiert!');
+            };
+            document.body.appendChild(errDiv);
+            return false;
+        };
+    </script>
 </head>
 <body>
     <div class="app-container">
