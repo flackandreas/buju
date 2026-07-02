@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let charts = {};
     let lastOverview = null;
     let lastClassStats = null;
+    let classesLoaded = false;
     // Offline / Sync Queue state
     let syncQueue = JSON.parse(localStorage.getItem('bjs_sync_queue') || '{}');
     let syncStatusBadge = document.getElementById('sync-status-badge');
@@ -636,7 +637,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     // 5. DATA INGESTION: CLASSES & STUDENTS
     // ==========================================
-    let classesLoaded = false;
     function loadClasses() {
         if (classesLoaded) return;
         
