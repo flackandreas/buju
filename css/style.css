@@ -1768,3 +1768,45 @@ body {
 .dialog-close-btn:hover {
     color: var(--text-primary);
 }
+
+/* Admin Lock Card Styling */
+.admin-lock-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    max-width: 450px;
+    margin: 40px auto;
+}
+
+.lock-icon {
+    font-size: 56px;
+    margin-bottom: 16px;
+    filter: drop-shadow(0 0 10px var(--primary-glow));
+    animation: wobbleLock 4s infinite ease-in-out;
+    display: inline-block;
+}
+
+@keyframes wobbleLock {
+    0%, 100% { transform: rotate(0); }
+    45% { transform: rotate(0); }
+    50% { transform: rotate(-8deg); }
+    55% { transform: rotate(8deg); }
+    60% { transform: rotate(-5deg); }
+    65% { transform: rotate(5deg); }
+    70% { transform: rotate(0); }
+}
+
+.admin-lock-card h3 {
+    font-family: var(--font-header);
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+.admin-lock-card p {
+    font-size: 13px;
+    margin: 0;
+}

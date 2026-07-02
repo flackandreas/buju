@@ -391,42 +391,59 @@ try {
             
             <!-- View: Verwaltung -->
             <section id="view-admin" class="content-view">
-                <div class="admin-card">
-                    <h3>⚙️ Systemsteuerung</h3>
-                    <p class="text-muted">Hier können Sie den Zustand der Anwendung konfigurieren und den originalen Datenbestand importieren.</p>
+                <!-- Locked State -->
+                <div class="admin-lock-card" id="admin-locked-state" style="<?php echo ($_SESSION['is_admin'] ?? false) ? 'display:none;' : 'display:block;'; ?>">
+                    <div class="lock-icon">🔒</div>
+                    <h3>Verwaltungsbereich gesperrt</h3>
+                    <p class="text-muted">Bitte geben Sie das Administrator-Passwort ein, um Zugriff auf die Systemsteuerung zu erhalten.</p>
                     
-                    <hr class="divider">
-                    
-                    <div class="admin-action-row">
-                        <div class="action-info">
-                            <h4>Originalen Datenbestand wiederherstellen</h4>
-                            <p>Dies überschreibt alle aktuellen Ergebnisse in der Datenbank und importiert die Schülerliste sowie die ursprünglichen Testergebnisse aus der Excel-Vorlage.</p>
+                    <form id="form-admin-unlock" autocomplete="off" style="margin-top: 20px; display: flex; flex-direction: column; gap: 12px; max-width: 320px; margin-left: auto; margin-right: auto;">
+                        <div class="form-group">
+                            <input type="password" id="admin-password-input" placeholder="Admin-Passwort" class="form-input" required style="text-align: center;">
                         </div>
-                        <div class="action-btn">
-                            <button type="button" class="btn btn-danger" id="btn-reset-db">Datenbank zurücksetzen</button>
-                        </div>
-                    </div>
-                    
-                    <hr class="divider">
-                    
-                    <div class="admin-action-row">
-                        <div class="action-info">
-                            <h4>Paritäts-Berechnungs-Check</h4>
-                            <p>Hier können Sie den Abgleich-Skript-Pfad einsehen, um die mathematische Parität der Berechnungslogik mit den Originaldaten der Excel-Tabelle zu prüfen.</p>
-                        </div>
-                        <div class="action-btn">
-                            <a href="verify_calculations.php" target="_blank" class="btn btn-secondary">Berechnungen prüfen</a>
-                        </div>
-                    </div>
+                        <button type="submit" class="btn btn-primary">Bereich freischalten</button>
+                    </form>
                 </div>
-                
-                <div class="admin-card text-card mt-20">
-                    <h3>💡 Hinweise zur Tablet-Bedienung (iPad/Safari)</h3>
-                    <ul>
-                        <li><strong>Automatische Speicherung:</strong> Beim Verlassen eines Eingabefeldes oder beim Klick auf "Nächster Schüler" werden die Werte automatisch im Hintergrund per AJAX gespeichert. Der grüne Haken oben rechts signalisiert den Speichererfolg.</li>
-                        <li><strong>Format für Ausdauerlauf:</strong> Bitte geben Sie die Zeiten im Format <code>MM:SS</code> ein (z.B. <code>04:25</code>). Der Punkt <code>4.25</code> wird von dieser Web-App ebenfalls automatisch erkannt und in das korrekte Zeitformat umgerechnet.</li>
-                        <li><strong>Offline-Verhalten:</strong> Die Webapp speichert die Daten auf dem Server. Sollte die Verbindung kurzzeitig abbrechen, wird beim Speichern ein rotes Ausrufezeichen angezeigt. Sobald die Verbindung wieder stabil ist, versuchen Sie die Werte erneut einzugeben.</li>
-                    </ul>
+
+                <!-- Unlocked State -->
+                <div id="admin-unlocked-state" style="<?php echo ($_SESSION['is_admin'] ?? false) ? 'display:block;' : 'display:none;'; ?>">
+                    <div class="admin-card">
+                        <h3>⚙️ Systemsteuerung</h3>
+                        <p class="text-muted">Hier können Sie den Zustand der Anwendung konfigurieren und den originalen Datenbestand importieren.</p>
+                        
+                        <hr class="divider">
+                        
+                        <div class="admin-action-row">
+                            <div class="action-info">
+                                <h4>Originalen Datenbestand wiederherstellen</h4>
+                                <p>Dies überschreibt alle aktuellen Ergebnisse in der Datenbank und importiert die Schülerliste sowie die ursprünglichen Testergebnisse aus der Excel-Vorlage.</p>
+                            </div>
+                            <div class="action-btn">
+                                <button type="button" class="btn btn-danger" id="btn-reset-db">Datenbank zurücksetzen</button>
+                            </div>
+                        </div>
+                        
+                        <hr class="divider">
+                        
+                        <div class="admin-action-row">
+                            <div class="action-info">
+                                <h4>Paritäts-Berechnungs-Check</h4>
+                                <p>Hier können Sie den Abgleich-Skript-Pfad einsehen, um die mathematische Parität der Berechnungslogik mit den Originaldaten der Excel-Tabelle zu prüfen.</p>
+                            </div>
+                            <div class="action-btn">
+                                <a href="verify_calculations.php" target="_blank" class="btn btn-secondary">Berechnungen prüfen</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-card text-card mt-20">
+                        <h3>💡 Hinweise zur Tablet-Bedienung (iPad/Safari)</h3>
+                        <ul>
+                            <li><strong>Automatische Speicherung:</strong> Beim Verlassen eines Eingabefeldes oder beim Klick auf "Nächster Schüler" werden die Werte automatisch im Hintergrund per AJAX gespeichert. Der grüne Haken oben rechts signalisiert den Speichererfolg.</li>
+                            <li><strong>Format für Ausdauerlauf:</strong> Bitte geben Sie die Zeiten im Format <code>MM:SS</code> ein (z.B. <code>04:25</code>). Der Punkt <code>4.25</code> wird von dieser Web-App ebenfalls automatisch erkannt und in das korrekte Zeitformat umgerechnet.</li>
+                            <li><strong>Offline-Verhalten:</strong> Die Webapp speichert die Daten auf dem Server. Sollte die Verbindung kurzzeitig abbrechen, wird beim Speichern ein rotes Ausrufezeichen angezeigt. Sobald die Verbindung wieder stabil ist, versuchen Sie die Werte erneut einzugeben.</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </main>

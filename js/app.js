@@ -99,6 +99,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnCloseEditDialog = document.getElementById('btn-close-edit-dialog');
     const btnCancelEditStudent = document.getElementById('btn-cancel-edit-student');
 
+    // Admin Unlock elements
+    const formAdminUnlock = document.getElementById('form-admin-unlock');
+    const adminPasswordInput = document.getElementById('admin-password-input');
+    const adminLockedState = document.getElementById('admin-locked-state');
+    const adminUnlockedState = document.getElementById('admin-unlocked-state');
+
     // Global fetch interceptor to handle session timeouts (401 Unauthorized)
     const originalFetch = window.fetch;
     window.fetch = async function(...args) {
@@ -1148,6 +1154,37 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(err => {
                 console.error(err);
                 showToast('Netzwerkfehler beim Aktualisieren des Schülers.', 'error');
+            });
+        });
+    }
+
+
+    // Admin Unlock Submit Handler
+    if (formAdminUnlock) {
+        formAdminUnlock.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const password = adminPasswordInput.value;
+            
+            fetch('api.php?action=verify_admin', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ password: password })
+            })
+            .then(res => res.json())
+            .then(res => {
+                if (res.success) {
+                    showToast('Administrationsbereich freigeschaltet!');
+                    adminLockedState.style.display = 'none';
+                    adminUnlockedState.style.display = 'block';
+                    adminPasswordInput.value = '';
+                } else {
+                    showToast(res.error || 'Falsches Passwort', 'error');
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                showToast('Netzwerkfehler bei der Admin-Freischaltung.', 'error');
             });
         });
     }

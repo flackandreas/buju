@@ -321,9 +321,33 @@ try {
             ]);
             break;
             
+        case 'verify_admin':
+            if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+                send_error("Method not allowed", 405);
+            }
+            
+            $input = json_decode(file_get_contents('php://input'), true);
+            if (!$input) {
+                send_error("Invalid JSON body", 400);
+            }
+            
+            $password = $input['password'] ?? '';
+            
+            if ($password === 'admin4232') {
+                $_SESSION['is_admin'] = true;
+                send_json(['success' => true]);
+            } else {
+                send_error("Falsches Admin-Passwort", 403);
+            }
+            break;
+
         case 'reset_db':
             if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
                 send_error("Method not allowed", 405);
+            }
+            
+            if (!($_SESSION['is_admin'] ?? false)) {
+                send_error("Administrator-Rechte erforderlich", 403);
             }
             
             // Run importer script
