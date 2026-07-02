@@ -10,11 +10,42 @@ document.addEventListener('DOMContentLoaded', () => {
     let selectedStudent = null;
     let autoSaveTimeout = null;
     let charts = {};
+    let lastOverview = null;
+    let lastClassStats = null;
     // Offline / Sync Queue state
     let syncQueue = JSON.parse(localStorage.getItem('bjs_sync_queue') || '{}');
     let syncStatusBadge = document.getElementById('sync-status-badge');
     let syncStatusText = document.getElementById('sync-status-text');
     let isSyncing = false;
+
+    // Theme Switcher Initialization
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleText = document.getElementById('theme-toggle-text');
+    
+    const savedTheme = localStorage.getItem('bjs_theme') || 'dark';
+    if (savedTheme === 'light') {
+        document.documentElement.classList.add('light-theme');
+        if (themeToggleText) themeToggleText.textContent = '🌙 Dunkles Design';
+    } else {
+        document.documentElement.classList.remove('light-theme');
+        if (themeToggleText) themeToggleText.textContent = '☀️ Helles Design';
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const isLightNow = document.documentElement.classList.toggle('light-theme');
+            localStorage.setItem('bjs_theme', isLightNow ? 'light' : 'dark');
+            
+            if (themeToggleText) {
+                themeToggleText.textContent = isLightNow ? '🌙 Dunkles Design' : '☀️ Helles Design';
+            }
+            
+            // Re-render charts to adjust text/grid colors dynamically
+            if (activeView === 'dashboard' && lastOverview && lastClassStats) {
+                renderCharts(lastOverview, lastClassStats);
+            }
+        });
+    }
 
     // DOM Elements
     const navItems = document.querySelectorAll('.nav-item');
@@ -856,6 +887,8 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(res => res.json())
         .then(res => {
             if (res.success) {
+                lastOverview = res.overview;
+                lastClassStats = res.class_stats;
                 renderOverviewKPIs(res.overview);
                 renderClassStatsTable(res.class_stats);
                 renderSchoolRecords(res.records);
@@ -949,6 +982,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (charts.urkunden) charts.urkunden.destroy();
         if (charts.klassen) charts.klassen.destroy();
         
+        // Dynamically check theme
+        const isLight = document.documentElement.classList.contains('light-theme');
+        const textColor = isLight ? '#4B5563' : '#9CA3AF';
+        const gridColor = isLight ? 'rgba(0, 0, 0, 0.06)' : 'rgba(255, 255, 255, 0.05)';
+        const borderColor = isLight ? '#FFFFFF' : '#131A2D';
+        const noneColor = isLight ? '#D1D5DB' : '#374151';
+        
         // Chart 1: Urkunden distribution
         const ctxUrkunden = document.getElementById('chart-urkunden').getContext('2d');
         charts.urkunden = new Chart(ctxUrkunden, {
@@ -962,8 +1002,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         overview.teilnehmerurkunden,
                         overview.keine_teilnahme
                     ],
-                    backgroundColor: ['#FFB300', '#10B981', '#F97316', '#374151'],
-                    borderColor: '#131A2D',
+                    backgroundColor: ['#FFB300', '#10B981', '#F97316', noneColor],
+                    borderColor: borderColor,
                     borderWidth: 2
                 }]
             },
@@ -974,7 +1014,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     legend: {
                         position: 'bottom',
                         labels: {
-                            color: '#9CA3AF',
+                            color: textColor,
                             font: { family: 'Inter', size: 11 }
                         }
                     }
@@ -1002,12 +1042,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 maintainAspectRatio: false,
                 scales: {
                     y: {
-                        grid: { color: 'rgba(255,255,255,0.05)' },
-                        ticks: { color: '#9CA3AF', font: { family: 'Inter', size: 10 } }
+                        grid: { color: gridColor },
+                        ticks: { color: textColor, font: { family: 'Inter', size: 10 } }
                     },
                     x: {
                         grid: { display: false },
-                        ticks: { color: '#9CA3AF', font: { family: 'Inter', size: 10 } }
+                        ticks: { color: textColor, font: { family: 'Inter', size: 10 } }
                     }
                 },
                 plugins: {

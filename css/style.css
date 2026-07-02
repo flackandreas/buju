@@ -38,6 +38,30 @@
     --topbar-height: 54px;
 }
 
+:root.light-theme {
+    --bg-main: #F3F4F6;
+    --bg-surface: #FFFFFF;
+    --bg-surface-header: #E5E7EB;
+    --bg-glass: rgba(255, 255, 255, 0.7);
+    --border-color: rgba(0, 0, 0, 0.08);
+    --border-glow: rgba(59, 130, 246, 0.15);
+    
+    --text-primary: #111827;
+    --text-secondary: #4B5563;
+    --text-muted: #6B7280;
+    
+    --primary: #2563EB;
+    --primary-glow: rgba(37, 99, 235, 0.15);
+    --secondary: #059669;
+    --accent: #D97706;
+    --danger: #DC2626;
+    --danger-glow: rgba(220, 38, 38, 0.1);
+    
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -107,7 +131,7 @@ body {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: -0.5px;
-    color: #FFF;
+    color: var(--text-primary);
 }
 
 .brand-title .sub-title {
@@ -139,8 +163,8 @@ body {
 }
 
 .nav-item:hover {
-    background-color: rgba(255, 255, 255, 0.04);
-    color: #FFF;
+    background-color: var(--border-color);
+    color: var(--text-primary);
 }
 
 .nav-item.active {
@@ -215,7 +239,7 @@ body {
     font-family: var(--font-header);
     font-size: 20px;
     font-weight: 800;
-    color: #FFF;
+    color: var(--text-primary);
     letter-spacing: -0.5px;
 }
 
@@ -363,7 +387,7 @@ body {
     font-family: var(--font-header);
     font-size: 24px;
     font-weight: 800;
-    color: #FFF;
+    color: var(--text-primary);
     line-height: 1.1;
 }
 
@@ -402,7 +426,7 @@ body {
     font-family: var(--font-header);
     font-size: 14px;
     font-weight: 600;
-    color: #FFF;
+    color: var(--text-primary);
     margin-bottom: 12px;
     display: flex;
     align-items: center;
@@ -618,13 +642,12 @@ body {
     text-transform: uppercase;
 }
 
-/* Inputs & Form Elements */
 .form-select, .form-input {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--bg-main);
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    color: #FFF;
+    color: var(--text-primary);
     padding: 7px 10px;
     font-size: 13px;
     outline: none;
@@ -707,7 +730,7 @@ body {
 .student-name-block .fullname {
     font-size: 13px;
     font-weight: 600;
-    color: #FFF;
+    color: var(--text-primary);
 }
 
 .student-name-block .gender-age {
@@ -744,7 +767,7 @@ body {
 
 .empty-form-state h3 {
     font-family: var(--font-header);
-    color: #FFF;
+    color: var(--text-primary);
 }
 
 .empty-form-state p {
@@ -795,7 +818,7 @@ body {
     font-family: var(--font-header);
     font-size: 15px;
     font-weight: 700;
-    color: #FFF;
+    color: var(--text-primary);
 }
 
 .student-meta {
@@ -911,9 +934,8 @@ body {
     color: var(--primary);
 }
 
-/* Live Evaluation Card */
 .live-evaluation-card {
-    background: linear-gradient(135deg, #1C2541 0%, #131A2D 100%);
+    background: linear-gradient(135deg, var(--bg-surface-header) 0%, var(--bg-surface) 100%);
     border: 1px solid rgba(59, 130, 246, 0.25);
     border-radius: 10px;
     padding: 12px;
@@ -945,7 +967,7 @@ body {
 .eval-val {
     font-size: 20px;
     font-weight: 800;
-    color: #FFF;
+    color: var(--text-primary);
 }
 
 .eval-val.text-primary {
@@ -1197,6 +1219,40 @@ body {
     .form-actions button {
         width: 100%;
     }
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    padding: 8px 12px;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.theme-toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    border-color: var(--primary);
+}
+
+.light-theme .theme-toggle-btn {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.light-theme .theme-toggle-btn:hover {
+    background-color: rgba(0, 0, 0, 0.08);
 }
 
 /* ==========================================

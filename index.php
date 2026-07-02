@@ -58,6 +58,9 @@ try {
             </nav>
             
             <div class="sidebar-footer">
+                <button class="theme-toggle-btn" id="theme-toggle" title="Design wechseln">
+                    <span id="theme-toggle-text">☀️ Helles Design</span>
+                </button>
                 <div class="db-status <?php echo $db_status_ok ? 'status-ok' : 'status-error'; ?>">
                     <span class="status-indicator"></span>
                     <span class="status-text"><?php echo $db_status_ok ? 'Datenbank verbunden' : 'Fehler: ' . htmlspecialchars($db_status_msg); ?></span>
