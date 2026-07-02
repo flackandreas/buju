@@ -752,11 +752,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 badgeHtml = `<span class="badge ${badgeClass}">${st.gesamt_punkte} P.</span>`;
             }
             
-            const age = 2026 - parseInt(st.geburtsjahr, 10);
             li.innerHTML = `
                 <div class="student-name-block">
                     <span class="fullname">${st.vorname} ${st.name}</span>
-                    <span class="gender-age">${st.geschlecht} • ${age} Jahre</span>
+                    <span class="gender-age">${st.geschlecht} • Geb. ${st.geburtsjahr}</span>
                 </div>
                 <div class="badge-container">
                     ${badgeHtml}
@@ -803,11 +802,9 @@ document.addEventListener('DOMContentLoaded', () => {
         formEmptyState.style.display = 'none';
         formActiveState.style.display = 'flex';
         
-        // Profile Meta
-        const age = 2026 - parseInt(student.geburtsjahr, 10);
         const genderLabel = student.geschlecht === 'W' ? 'Mädchen' : 'Junge';
         formStudentName.textContent = `${student.vorname} ${student.name}`;
-        formStudentMeta.textContent = `Klasse ${student.klasse} • Geboren ${student.geburtsjahr} (${age} Jahre) • ${genderLabel}`;
+        formStudentMeta.textContent = `Klasse ${student.klasse} • Geburtsjahr: ${student.geburtsjahr} • ${genderLabel}`;
         
         // Avatar
         formAvatar.textContent = student.vorname.charAt(0) + student.name.charAt(0);
