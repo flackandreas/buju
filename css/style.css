@@ -36,6 +36,7 @@
     
     --sidebar-width: 220px;
     --topbar-height: 54px;
+    --kpi-bg: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
 }
 
 :root.light-theme {
@@ -60,6 +61,7 @@
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05);
     --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --kpi-bg: linear-gradient(135deg, #FFFFFF 0%, #F9FAFB 100%);
 }
 
 * {
@@ -354,19 +356,19 @@ body {
 }
 
 .gradient-card-blue {
-    background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+    background: var(--kpi-bg);
     border-left: 4px solid #3B82F6;
 }
 .gradient-card-green {
-    background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+    background: var(--kpi-bg);
     border-left: 4px solid #10B981;
 }
 .gradient-card-orange {
-    background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+    background: var(--kpi-bg);
     border-left: 4px solid #F59E0B;
 }
 .gradient-card-purple {
-    background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+    background: var(--kpi-bg);
     border-left: 4px solid #A855F7;
 }
 
