@@ -151,6 +151,99 @@ try {
             ]);
             break;
             
+        case 'update_student':
+            if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+                send_error("Method not allowed", 405);
+            }
+            
+            $input = json_decode(file_get_contents('php://input'), true);
+            if (!$input) {
+                send_error("Invalid JSON body", 400);
+            }
+            
+            $student_id = intval($input['student_id'] ?? 0);
+            $vorname = trim($input['vorname'] ?? '');
+            $name = trim($input['name'] ?? '');
+            $klasse = trim($input['klasse'] ?? '');
+            $geburtsjahr = intval($input['geburtsjahr'] ?? 0);
+            
+            if ($student_id <= 0 || empty($vorname) || empty($name) || empty($klasse) || $geburtsjahr <= 0) {
+                send_error("Invalid parameters", 400);
+            }
+            
+            // 1. Check if student exists
+            $stmt = $pdo->prepare("SELECT id, geschlecht FROM students WHERE id = ?");
+            $stmt->execute([$student_id]);
+            $st = $stmt->fetch();
+            if (!$st) {
+                send_error("Student not found", 404);
+            }
+            
+            $gender = $st['geschlecht'];
+            
+            // 2. Update students table
+            $stmt = $pdo->prepare("UPDATE students SET vorname = ?, name = ?, klasse = ?, geburtsjahr = ? WHERE id = ?");
+            $stmt->execute([$vorname, $name, $klasse, $geburtsjahr, $student_id]);
+            
+            // 3. Re-calculate results if they exist
+            $stmt = $pdo->prepare("SELECT * FROM results WHERE student_id = ?");
+            $stmt->execute([$student_id]);
+            $res = $stmt->fetch();
+            if ($res) {
+                // Recompute BJS results with new birth year / class
+                $calc = BJSCalculator::calculate(
+                    $gender,
+                    $geburtsjahr,
+                    $klasse,
+                    $res['ausdauer_leistung'],
+                    $res['sprint_leistung'] !== null ? floatval($res['sprint_leistung']) : null,
+                    $res['sprung_leistung'] !== null ? floatval($res['sprung_leistung']) : null,
+                    $res['wurf_leistung'] !== null ? floatval($res['wurf_leistung']) : null
+                );
+                
+                // Update results table
+                $stmt = $pdo->prepare("
+                    UPDATE results SET
+                        ausdauer_punkte = ?,
+                        sprint_punkte = ?,
+                        sprung_punkte = ?,
+                        wurf_punkte = ?,
+                        gesamt_punkte = ?,
+                        urkunde = ?,
+                        note = ?,
+                        updated_at = CURRENT_TIMESTAMP
+                    WHERE student_id = ?
+                ");
+                $stmt->execute([
+                    $calc['ausdauer_punkte'],
+                    $calc['sprint_punkte'],
+                    $calc['sprung_punkte'],
+                    $calc['wurf_punkte'],
+                    $calc['gesamt_punkte'],
+                    $calc['urkunde'],
+                    $calc['note'],
+                    $student_id
+                ]);
+            }
+            
+            // Fetch updated student and results to return to frontend
+            $stmt = $pdo->prepare("
+                SELECT s.id, s.klasse, s.name, s.vorname, s.geburtsjahr, s.geschlecht,
+                       r.ausdauer_leistung, r.sprint_leistung, r.sprung_leistung, r.wurf_leistung,
+                       r.gesamt_punkte, r.urkunde, r.note
+                FROM students s
+                LEFT JOIN results r ON s.id = r.student_id
+                WHERE s.id = ?
+            ");
+            $stmt->execute([$student_id]);
+            $updated_student = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+            send_json([
+                'success' => true,
+                'student' => $updated_student
+            ]);
+            break;
+            
         case 'get_dashboard':
             // 1. Get overview stats
             $total_students = intval($pdo->query("SELECT COUNT(*) FROM students")->fetchColumn());

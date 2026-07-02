@@ -1693,3 +1693,78 @@ body {
 .logout-icon {
     font-size: 16px;
 }
+
+/* Student Edit button */
+.btn-edit-student {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 2px 4px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    opacity: 0.5;
+}
+
+.btn-edit-student:hover {
+    background-color: var(--border-color);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* HTML5 Dialog styling */
+.theme-dialog {
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+    border-radius: 16px;
+    padding: 0;
+    max-width: 420px;
+    width: 90%;
+    box-shadow: var(--shadow-lg);
+    font-family: var(--font-sans);
+    backdrop-filter: blur(12px);
+    border-width: 1px;
+}
+
+.theme-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.dialog-content {
+    padding: 20px;
+}
+
+.dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+}
+
+.dialog-header h3 {
+    margin: 0;
+    font-family: var(--font-header);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.dialog-close-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 22px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 4px;
+}
+
+.dialog-close-btn:hover {
+    color: var(--text-primary);
+}

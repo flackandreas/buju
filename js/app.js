@@ -87,6 +87,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnNextStudent = document.getElementById('btn-next-student');
     const btnResetDb = document.getElementById('btn-reset-db');
 
+    // Edit Student dialog elements
+    const btnTriggerEditStudent = document.getElementById('btn-trigger-edit-student');
+    const dialogEditStudent = document.getElementById('dialog-edit-student');
+    const formEditStudent = document.getElementById('form-edit-student');
+    const editStudentId = document.getElementById('edit-student-id');
+    const editStudentVorname = document.getElementById('edit-student-vorname');
+    const editStudentNachname = document.getElementById('edit-student-nachname');
+    const editStudentKlasse = document.getElementById('edit-student-klasse');
+    const editStudentGeburtsjahr = document.getElementById('edit-student-geburtsjahr');
+    const btnCloseEditDialog = document.getElementById('btn-close-edit-dialog');
+    const btnCancelEditStudent = document.getElementById('btn-cancel-edit-student');
+
     // Global fetch interceptor to handle session timeouts (401 Unauthorized)
     const originalFetch = window.fetch;
     window.fetch = async function(...args) {
@@ -1055,6 +1067,88 @@ document.addEventListener('DOMContentLoaded', () => {
                     legend: { display: false }
                 }
             }
+        });
+    }
+
+    // ==========================================
+    // 6b. EDIT STUDENT PROFILE
+    // ==========================================
+    if (btnTriggerEditStudent) {
+        btnTriggerEditStudent.addEventListener('click', () => {
+            if (!selectedStudent) return;
+            
+            editStudentId.value = selectedStudent.id;
+            editStudentVorname.value = selectedStudent.vorname;
+            editStudentNachname.value = selectedStudent.name;
+            editStudentKlasse.value = selectedStudent.klasse;
+            editStudentGeburtsjahr.value = selectedStudent.geburtsjahr;
+            
+            dialogEditStudent.showModal();
+        });
+    }
+
+    const closeEditDialog = () => {
+        dialogEditStudent.close();
+    };
+
+    if (btnCloseEditDialog) btnCloseEditDialog.addEventListener('click', closeEditDialog);
+    if (btnCancelEditStudent) btnCancelEditStudent.addEventListener('click', closeEditDialog);
+
+    if (formEditStudent) {
+        formEditStudent.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const payload = {
+                student_id: parseInt(editStudentId.value, 10),
+                vorname: editStudentVorname.value.trim(),
+                name: editStudentNachname.value.trim(),
+                klasse: editStudentKlasse.value.trim(),
+                geburtsjahr: parseInt(editStudentGeburtsjahr.value, 10)
+            };
+            
+            fetch('api.php?action=update_student', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            })
+            .then(res => res.json())
+            .then(res => {
+                if (res.success) {
+                    showToast('Schülerdaten erfolgreich aktualisiert!');
+                    closeEditDialog();
+                    
+                    const oldClass = selectedStudent.klasse;
+                    const newClass = res.student.klasse;
+                    
+                    // Update current selectedStudent
+                    selectedStudent = res.student;
+                    
+                    // 1. If class has changed, reload classes dropdown and student list
+                    if (oldClass !== newClass) {
+                        classesLoaded = false;
+                        loadClasses();
+                        classSelect.value = newClass;
+                        currentClass = newClass;
+                        loadStudents();
+                    } else {
+                        // Just update the student list locally and re-render
+                        studentsList = studentsList.map(st => st.id === selectedStudent.id ? selectedStudent : st);
+                        renderStudentList(studentsList);
+                    }
+                    
+                    // 2. Refresh active profile display
+                    selectStudent(selectedStudent);
+                    
+                    // 3. Trigger recalculation UI update
+                    updateLiveCalculationUI();
+                } else {
+                    showToast('Fehler: ' + (res.error || 'Speichern fehlgeschlagen'), 'error');
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                showToast('Netzwerkfehler beim Aktualisieren des Schülers.', 'error');
+            });
         });
     }
 

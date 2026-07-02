@@ -287,7 +287,10 @@ try {
                                 <div class="student-profile">
                                     <div class="profile-avatar" id="form-avatar"></div>
                                     <div class="profile-info">
-                                        <h3 id="form-student-name">Name</h3>
+                                        <div style="display: flex; align-items: center; gap: 6px;">
+                                            <h3 id="form-student-name">Name</h3>
+                                            <button type="button" class="btn-edit-student" id="btn-trigger-edit-student" title="Schülerdaten bearbeiten">✏️</button>
+                                        </div>
                                         <span class="student-meta" id="form-student-meta">Klasse • Alter • M</span>
                                     </div>
                                 </div>
@@ -434,6 +437,45 @@ try {
     
     <!-- Dynamic Print Section (only visible during print) -->
     <div id="print-area" class="print-only"></div>
+
+    <!-- Dialog Modal: Edit Student Profile -->
+    <dialog id="dialog-edit-student" class="theme-dialog">
+        <div class="dialog-content">
+            <div class="dialog-header">
+                <h3>✏️ Schülerdaten bearbeiten</h3>
+                <button type="button" class="dialog-close-btn" id="btn-close-edit-dialog">×</button>
+            </div>
+            <form id="form-edit-student" autocomplete="off" onsubmit="event.preventDefault();">
+                <input type="hidden" id="edit-student-id">
+                
+                <div class="form-group" style="margin-bottom: 12px;">
+                    <label for="edit-student-vorname" style="display:block; margin-bottom:4px; font-size:12px; font-weight:600; color:var(--text-secondary);">Vorname</label>
+                    <input type="text" id="edit-student-vorname" class="form-input" required>
+                </div>
+                
+                <div class="form-group" style="margin-bottom: 12px;">
+                    <label for="edit-student-nachname" style="display:block; margin-bottom:4px; font-size:12px; font-weight:600; color:var(--text-secondary);">Nachname</label>
+                    <input type="text" id="edit-student-nachname" class="form-input" required>
+                </div>
+                
+                <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px;">
+                    <div class="form-group">
+                        <label for="edit-student-klasse" style="display:block; margin-bottom:4px; font-size:12px; font-weight:600; color:var(--text-secondary);">Klasse</label>
+                        <input type="text" id="edit-student-klasse" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-student-geburtsjahr" style="display:block; margin-bottom:4px; font-size:12px; font-weight:600; color:var(--text-secondary);">Geburtsjahr</label>
+                        <input type="number" id="edit-student-geburtsjahr" class="form-input" required min="1990" max="2030">
+                    </div>
+                </div>
+                
+                <div class="dialog-actions" style="display: flex; justify-content: flex-end; gap: 8px;">
+                    <button type="button" class="btn btn-secondary" id="btn-cancel-edit-student">Abbrechen</button>
+                    <button type="submit" class="btn btn-primary" id="btn-save-edit-student">Speichern</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
 
     <!-- Load rules & app logic -->
     <script src="js/rules.js"></script>
