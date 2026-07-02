@@ -377,8 +377,7 @@ try {
                                     </div>
                                 </div>
                                 
-                                <div class="form-actions">
-                                    <button type="button" class="btn btn-secondary" id="btn-clear-fields">Felder leeren</button>
+                                <div class="form-actions" style="justify-content: flex-end;">
                                     <button type="button" class="btn btn-primary" id="btn-next-student">Nächster Schüler →</button>
                                 </div>
                             </form>

@@ -84,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Status & Buttons
     const saveStatus = document.getElementById('save-status');
-    const btnClearFields = document.getElementById('btn-clear-fields');
     const btnNextStudent = document.getElementById('btn-next-student');
     const btnResetDb = document.getElementById('btn-reset-db');
 
@@ -839,15 +838,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Form button handlers
-    btnClearFields.addEventListener('click', () => {
-        if (!selectedStudent) return;
-        inputSprint.value = '';
-        inputSprung.value = '';
-        inputWurf.value = '';
-        inputAusdauer.value = '';
-        updateLiveCalculationUI();
-        triggerAutoSave();
-    });
 
     btnNextStudent.addEventListener('click', () => {
         if (!selectedStudent || studentsList.length === 0) return;
