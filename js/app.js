@@ -88,6 +88,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnNextStudent = document.getElementById('btn-next-student');
     const btnResetDb = document.getElementById('btn-reset-db');
 
+    // Global fetch interceptor to handle session timeouts (401 Unauthorized)
+    const originalFetch = window.fetch;
+    window.fetch = async function(...args) {
+        try {
+            const response = await originalFetch(...args);
+            if (response.status === 401) {
+                window.location.reload();
+            }
+            return response;
+        } catch (error) {
+            throw error;
+        }
+    };
+
     // ==========================================
     // 1. SPA ROUTING
     // ==========================================

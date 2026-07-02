@@ -1,6 +1,39 @@
 <?php
 // index.php
 // Main landing page and frontend interface for Bundesjugendspiele Webapp.
+session_start();
+
+// Handle Logout
+if (isset($_GET['logout'])) {
+    session_destroy();
+    header('Location: index.php');
+    exit;
+}
+
+// Handle Login POST
+$login_error = '';
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
+    $username = trim($_POST['username'] ?? '');
+    $password = $_POST['password'] ?? '';
+    
+    if ($username === 'buju_rstn' && $password === 'buju4232') {
+        $_SESSION['logged_in'] = true;
+        $_SESSION['username'] = $username;
+        header('Location: index.php');
+        exit;
+    } else {
+        $login_error = 'Ungültiger Benutzername oder Passwort.';
+    }
+}
+
+$is_logged_in = $_SESSION['logged_in'] ?? false;
+
+// If not logged in, render the login page
+if (!$is_logged_in) {
+    include __DIR__ . '/login_template.php';
+    exit;
+}
+
 require_once __DIR__ . '/db.php';
 $db_status_ok = false;
 $db_status_msg = '';
@@ -86,6 +119,10 @@ try {
                 <button class="theme-toggle-btn" id="theme-toggle" title="Design wechseln">
                     <span id="theme-toggle-text">☀️ Helles Design</span>
                 </button>
+                <a href="index.php?logout=1" class="logout-link" title="Abmelden">
+                    <span class="logout-icon">🚪</span>
+                    <span class="logout-text">Abmelden</span>
+                </a>
                 <div class="db-status <?php echo $db_status_ok ? 'status-ok' : 'status-error'; ?>">
                     <span class="status-indicator"></span>
                     <span class="status-text"><?php echo $db_status_ok ? 'Datenbank verbunden' : 'Fehler: ' . htmlspecialchars($db_status_msg); ?></span>
