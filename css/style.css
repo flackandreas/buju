@@ -1042,6 +1042,58 @@ body {
     margin-top: auto;
 }
 
+/* Active Form Split Panel Layout */
+.active-form-state {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 16px;
+    align-items: stretch;
+    flex: 1;
+}
+
+.form-sidebar-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-right: 1px solid var(--border-color);
+    padding-right: 16px;
+}
+
+.form-sidebar-panel .student-profile {
+    margin-bottom: 4px;
+}
+
+.form-sidebar-panel .live-evaluation-card {
+    margin-bottom: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-sidebar-panel .auto-save-indicator {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+#bjs-input-form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .active-form-state {
+        grid-template-columns: 1fr;
+    }
+    .form-sidebar-panel {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding-right: 0;
+        padding-bottom: 16px;
+    }
+}
+
 /* Admin / Config panel */
 .admin-card {
     background-color: var(--bg-surface);

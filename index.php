@@ -220,7 +220,8 @@ try {
                         </div>
                         
                         <div class="active-form-state" id="form-active-state" style="display:none;">
-                            <div class="form-header">
+                            <!-- Left: Student Info & Live evaluation results panel -->
+                            <div class="form-sidebar-panel">
                                 <div class="student-profile">
                                     <div class="profile-avatar" id="form-avatar"></div>
                                     <div class="profile-info">
@@ -228,12 +229,35 @@ try {
                                         <span class="student-meta" id="form-student-meta">Klasse • Alter • M</span>
                                     </div>
                                 </div>
+
+                                <!-- Real-Time Evaluation Result -->
+                                <div class="live-evaluation-card">
+                                    <div class="evaluation-kpi">
+                                        <div class="eval-stat">
+                                            <span class="eval-label">Punkte</span>
+                                            <span class="eval-val font-outfit" id="live-total-points">0</span>
+                                        </div>
+                                        <div class="eval-stat">
+                                            <span class="eval-label">Urkunde</span>
+                                            <span class="badge badge-gray" id="live-urkunde-badge">Keine Teilnahme</span>
+                                        </div>
+                                        <div class="eval-stat">
+                                            <span class="eval-label">Sportnote</span>
+                                            <span class="eval-val font-outfit text-primary" id="live-grade">Keine Note</span>
+                                        </div>
+                                    </div>
+                                    <div class="lowest-points-indicator" id="live-lowest-dropped-msg">
+                                        Der schlechteste Wert wird gestrichen (Dreikampf-Modus).
+                                    </div>
+                                </div>
+
                                 <div class="auto-save-indicator" id="save-status">
                                     <span class="save-status-icon">✓</span>
                                     <span class="save-status-text">Gespeichert</span>
                                 </div>
                             </div>
                             
+                            <!-- Right: Event Inputs form -->
                             <form id="bjs-input-form" autocomplete="off" onsubmit="event.preventDefault();">
                                 <input type="hidden" id="input-student-id">
                                 
@@ -288,27 +312,6 @@ try {
                                             <span class="unit">min:sek</span>
                                         </div>
                                         <div class="calc-points" id="calc-points-ausdauer">0 Punkte</div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Real-Time Evaluation Result -->
-                                <div class="live-evaluation-card">
-                                    <div class="evaluation-kpi">
-                                        <div class="eval-stat">
-                                            <span class="eval-label">Gesamtpunkte (Beste 3)</span>
-                                            <span class="eval-val font-outfit" id="live-total-points">0</span>
-                                        </div>
-                                        <div class="eval-stat">
-                                            <span class="eval-label">Erreichte Urkunde</span>
-                                            <span class="badge badge-gray" id="live-urkunde-badge">Keine Teilnahme</span>
-                                        </div>
-                                        <div class="eval-stat">
-                                            <span class="eval-label">Sportnote</span>
-                                            <span class="eval-val font-outfit text-primary" id="live-grade">Keine Note</span>
-                                        </div>
-                                    </div>
-                                    <div class="lowest-points-indicator" id="live-lowest-dropped-msg">
-                                        Der schlechteste Wert wird gestrichen (Dreikampf-Modus).
                                     </div>
                                 </div>
                                 
